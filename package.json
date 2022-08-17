@@ -1,15 +1,41 @@
 {
-  "name": "@example/basics",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "devDependencies": {
-    "astro": "^1.0.5"
-  }
+	"name": "@example/basics",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"devDependencies": {
+		"@astrojs/react": "^1.0.0",
+		"astro": "^1.0.5",
+		"eslint": "^8.22.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"fa-brands": "link:@types/@styled-icons/fa-brands",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"dependencies": {
+		"@astrojs/svelte": "^1.0.0",
+		"@fontsource/fredoka": "^4.5.6",
+		"@fontsource/fredoka-one": "^4.5.8",
+		"@fontsource/montserrat": "^4.5.12",
+		"@fontsource/patua-one": "^4.5.8",
+		"@fontsource/rammetto-one": "^4.5.10",
+		"@styled-icons/fa-brands": "^10.38.0",
+		"boxicons": "^2.1.2",
+		"js-convert-case": "^4.2.0",
+		"normalize.css": "^8.0.1",
+		"react-is": "^18.2.0",
+		"styled-components": "^5.3.5",
+		"svelte": "^3.49.0",
+		"typescript": "^4.7.4",
+		"typescript-eslint": "0.0.1-alpha.0"
+	}
 }

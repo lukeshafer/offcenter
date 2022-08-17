@@ -1,0 +1,43 @@
+---
+import TodaysHours from './TodaysHours.svelte';
+import Social from './Social.astro';
+import Address from './Address.astro';
+
+import type { Props as AddressProps} from './Address.astro'
+type Hours = typeof import('../data/hours.json');
+type Socials = typeof import('../data/socials.json');
+
+export interface Props {
+	name: string;
+	subName: string;
+	logo: string;
+	hours: Hours;
+	socials: Socials;
+
+	address: AddressProps["address"];
+}
+
+const { name, subName, logo, hours, socials, address } = Astro.props as Props;
+---
+
+<img width="100" src={logo} alt="Logo" />
+<h1><span class="name">{name}</span> <span class="subname">{subName}</span></h1>
+
+<TodaysHours hours={hours} client:load />
+
+<Address address={address} />
+
+<div class="socials">
+	{
+		socials.map((social) => (
+			<Social name={social.name} link={social.link} icon={social.icon} />
+		))
+	}
+</div>
+
+<style>
+	.socials {
+		display: flex;
+		gap: 1rem;
+	}
+</style>

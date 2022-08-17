@@ -1,0 +1,21 @@
+---
+type Address = typeof import('../data/main-info.json')['address'];
+
+export interface Props {
+	address: Address;
+}
+
+const {
+	address: { address1, address2, city, state, zip },
+} = Astro.props as Props;
+---
+
+<address>
+	<p>{address1}</p>
+	<p>{address2}</p>
+	<p>
+		{city}{city && state ? ',' : ''}
+		{state}
+		{zip}
+	</p>
+</address>

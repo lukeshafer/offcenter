@@ -1,0 +1,13 @@
+---
+export interface Props {
+	tagline: string;
+	taglineEm: string;
+}
+
+const { tagline, taglineEm } = Astro.props as Props;
+---
+
+<section>
+	<p>{tagline}</p>
+	<p><em>{taglineEm}</em></p>
+</section>

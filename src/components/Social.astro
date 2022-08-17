@@ -1,0 +1,59 @@
+---
+import * as faBrands from "@styled-icons/fa-brands";
+import { toPascalCase } from "js-convert-case"
+type FaIcon = keyof typeof faBrands
+
+// Resolve types for the social media icon
+type Socials = typeof import("../data/socials.json")
+type Social = Socials[number];
+
+export type Props = Social;
+
+let { name, link, icon } = Astro.props as Social;
+
+// style icons formats icon names in PascalCase, but font awesome uses kebab-case
+icon = toPascalCase(icon)
+const iconName = toPascalCase(name)
+
+let Icon: FaIcon | null;
+
+// The user can make icon anything, so we need to validate it at build-time
+// the CMS should ALSO validate, to be safe
+const validateIcon = (icon: string): icon is FaIcon => {
+	return faBrands.hasOwnProperty(icon)
+}
+
+if (validateIcon(icon)) {
+	Icon = faBrands[icon];
+} else if (validateIcon(iconName)) {
+	Icon = faBrands[iconName];
+} else {
+	Icon = null;
+}
+---
+
+{Icon && (
+<a href={link} title={name} target="_blank">
+	<Icon></Icon>
+</a>
+)}
+
+<style>
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 2rem;
+		height: 2rem;
+		color: white;
+		background-color: black;
+		padding: 0.5rem;
+		border-radius: 50%;
+	}
+
+	a> :global(*) {
+		height: 2rem;
+		object-fit: contain;
+	}
+</style>

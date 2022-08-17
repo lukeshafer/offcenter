@@ -1,0 +1,31 @@
+{
+	"monday": {
+		"closed": true
+	},
+	"tuesday": {
+		"closed": true
+	},
+	"wednesday": {
+		"closed": false,
+		"openTime": "16:00",
+		"closeTime": "22:00"
+	},
+	"thursday": {
+		"closed": false,
+		"openTime": "16:00",
+		"closeTime": "22:00"
+	},
+	"friday": {
+		"closed": false,
+		"openTime": "16:00",
+		"closeTime": "22:00"
+	},
+	"saturday": {
+		"closed": false,
+		"openTime": "16:00",
+		"closeTime": "22:00"
+	},
+	"sunday": {
+		"closed": true
+	}
+}
