@@ -16,7 +16,6 @@
 		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
-		"fa-brands": "link:@types/@styled-icons/fa-brands",
 		"postcss-preset-env": "^7.8.0",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.0",

@@ -17,7 +17,6 @@ specifiers:
   eslint: ^8.22.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
-  fa-brands: link:@types/@styled-icons/fa-brands
   hast-util-to-html: ^8.0.0
   js-convert-case: ^4.2.0
   netlify-cms-app: ^2.15.72
@@ -62,7 +61,6 @@ devDependencies:
   eslint: 8.22.0
   eslint-config-prettier: 8.5.0_eslint@8.22.0
   eslint-plugin-prettier: 4.2.1_i2cojdczqdiurzgttlwdgf764e
-  fa-brands: link:@types/@styled-icons/fa-brands
   postcss-preset-env: 7.8.0_postcss@8.4.16
   prettier: 2.7.1
   prettier-plugin-astro: 0.5.0
