@@ -11,15 +11,18 @@
 	},
 	"devDependencies": {
 		"@astrojs/react": "^1.0.0",
+		"accessible-astro-components": "^1.5.5",
 		"astro": "^1.0.6",
 		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"fa-brands": "link:@types/@styled-icons/fa-brands",
+		"postcss-preset-env": "^7.8.0",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.0",
 		"react": "^18.0.0",
-		"react-dom": "^18.0.0"
+		"react-dom": "^18.0.0",
+		"sass": "^1.54.8"
 	},
 	"dependencies": {
 		"@astrojs/svelte": "^1.0.0",
@@ -29,7 +32,9 @@
 		"@fontsource/patua-one": "^4.5.8",
 		"@fontsource/rammetto-one": "^4.5.10",
 		"@styled-icons/fa-brands": "^10.38.0",
+		"autoprefixer": "^10.4.8",
 		"boxicons": "^2.1.2",
+		"cssnano": "^5.1.13",
 		"hast-util-to-html": "^8.0.0",
 		"js-convert-case": "^4.2.0",
 		"netlify-cms-app": "^2.15.72",

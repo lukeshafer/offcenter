@@ -1,0 +1,62 @@
+---
+import type { MarkdownInstance } from 'astro';
+import { Modal } from 'accessible-astro-components';
+
+export interface LinkFrontmatter {
+	title: string;
+	linkName: string;
+}
+
+export interface Props {
+	links: MarkdownInstance<LinkFrontmatter>[];
+}
+
+const { links } = Astro.props as Props;
+---
+
+<div class="links">
+	<h3>Links</h3>
+	<ul>
+		{
+			links.map(({ frontmatter, Content }) => (
+				<li>
+					<button id={`${frontmatter.linkName}-modal`}>
+						{frontmatter.linkName}
+					</button>
+					<Modal
+						title={frontmatter.title}
+						triggerId={`${frontmatter.linkName}-modal`}
+						closeText="Close">
+						<Content />
+					</Modal>
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<style>
+	.links {
+		text-align: right;
+
+		& ul {
+			list-style: none;
+			margin: 0;
+		}
+	}
+
+	:global(.modal__content) {
+		max-height: 80vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		gap: 0px !important;
+		& > :global(h3) {
+			font-size: 2em;
+			margin: 0.5rem 0;
+		}
+
+		& :global(p) {
+			/* margin: 1em; */
+		}
+	}
+</style>

@@ -1,0 +1,92 @@
+---
+interface dayHoursClosed {
+	closed: true;
+	openTime: never;
+	closeTime: never;
+}
+
+interface dayHoursOpen {
+	closed: false;
+	openTime: string;
+	closeTime: string;
+}
+
+export type Hours = {
+	[key: string]: dayHoursOpen | dayHoursClosed;
+};
+
+export interface Props {
+	hours: Hours;
+}
+
+const { hours } = Astro.props as Props;
+
+const convertTime = (time: string) => {
+	const hourNum = Number(time.substring(0, 2));
+	const min = time.substring(3, 5);
+	let period: 'AM' | 'PM';
+	let returnHour: string;
+
+	// correct the hour
+	if (hourNum === 0) {
+		returnHour = '12';
+		period = 'AM';
+	} else if (hourNum > 12) {
+		returnHour = `${hourNum - 12}`;
+		period = 'PM';
+	} else {
+		returnHour = `${hourNum}`;
+		period = 'AM';
+	}
+
+	return `${returnHour}:${min} ${period}`;
+};
+---
+
+<ul>
+	{
+		Object.entries(hours).map(([key, value]) => (
+			<li>
+				<p class="day">{key}</p>
+				<p class="hours">
+					{value.closed
+						? 'CLOSED'
+						: `${convertTime(value.openTime)} - ${convertTime(
+								value.closeTime
+						  )}`}
+				</p>
+			</li>
+		))
+	}
+</ul>
+
+<style>
+	ul {
+		list-style: none;
+		padding-inline-start: 0px;
+		padding-left: 0;
+
+		width: 84%;
+
+		display: flex;
+		flex-flow: column;
+		gap: 1rem;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+
+		& > p {
+			margin: 0;
+		}
+	}
+
+	.day {
+		text-transform: capitalize;
+	}
+
+	.hours {
+		text-transform: uppercase;
+	}
+</style>

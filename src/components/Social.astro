@@ -15,12 +15,12 @@ let { name, link, icon } = Astro.props as Social;
 icon = toPascalCase(icon);
 const iconName = toPascalCase(name);
 
-let Icon: FaIcon | null;
+let Icon: any;
 
 // The user can make icon anything, so we need to validate it at build-time
 // the CMS should ALSO validate, to be safe
 const validateIcon = (icon: string): icon is FaIcon => {
-	if (faBrands[icon]) {
+	if (faBrands[icon as FaIcon] || false) {
 		return true;
 	} else return false;
 };
@@ -36,8 +36,8 @@ if (validateIcon(icon)) {
 
 {
 	Icon && (
-		<a href={link} title={name} target="_blank">
-			<Icon />
+		<a href={link} title={name} target="_blank" class="hover">
+			<Icon/>
 		</a>
 	)
 }
@@ -48,16 +48,17 @@ if (validateIcon(icon)) {
 		align-items: center;
 		justify-content: center;
 
-		width: 2rem;
-		height: 2rem;
+		width: 1.6em;
+		height: 1.6em;
 		color: white;
-		background-color: black;
-		padding: 0.5rem;
+		background-color: var(--color-socials);
+		padding: 0.3em;
 		border-radius: 50%;
 	}
 
 	a > :global(*) {
-		height: 2rem;
+		height: 1.4em;
+		width: 1.4em;
 		object-fit: contain;
 	}
 </style>

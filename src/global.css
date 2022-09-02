@@ -1,0 +1,108 @@
+:root {
+	/* font sizes for header and hero */
+	--h-base-font: calc(max(1.5vw, 2.4vh) + 0.5rem);
+	--h-title-font: min(2 * var(--h-base-font), 12vw);
+	/* --h-title-font: calc(2 * var(--h-base-font)); */
+	--h-hours-font: min(1.05 * var(--h-base-font), 8.5vw);
+
+	--h-address-font: min(1 * var(--h-base-font), 8.2vw);
+	/* old social font size clamp(1rem, 1.0vw + 0.2rem, 3rem); */
+	--h-social-font: calc(0.7 * var(--h-base-font));
+	--h-button-font: min(1.2 * var(--h-base-font), 8vw);
+	--h-phone-font: min(0.8 * var(--h-base-font), 6vw);
+
+	--font-size-base: clamp(1rem, 0.44vw + 0.81rem, 1.3rem);
+	--font-size-md: min(clamp(1.6rem, 2vw + 1rem, 3.25rem), 7vw);
+	--font-size-lg: clamp(2rem, 2vw + 1.6rem, 3rem);
+
+	--color-text-lt: #f5f5f5;
+	--color-text-dk: #211616;
+	--color-socials: #333333;
+
+	--color-primary: #29a2a3;
+	--color-accent: #ff612f;
+	--color-bg: hsl(40, 18%, 97%);
+	--color-link: #d7e0f9;
+
+	--margin-page-h: clamp(1rem, -1rem + 10vw, 10rem);
+	--margin-page-v: clamp(1rem, -0.5rem + 5vw, 8rem);
+
+	--font-title: 'Rammetto One', sans-serif;
+	--font-button: 'Fredoka One', sans-serif;
+	--font-heading: 'FredokaVariable', 'Fredoka', sans-serif;
+	--font-subheading: 'Patua One', 'Times New Roman', serif;
+	--font-body: 'MontserratVariable', 'Montserrat', sans-serif;
+
+	--text-shadow: 0 1px 1px rgba(0, 0, 0, 25%);
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	font-size: var(--font-size-base);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-body);
+	font-weight: 500;
+
+	overflow-x: hidden;
+	height: 100%;
+}
+
+p {
+	/* font-size: var(--font-size-base); */
+	letter-spacing: 0.04em;
+}
+
+h1 {
+	font-size: var(--font-size-xl);
+	font-family: var(--font-title);
+	font-weight: lighter;
+	text-shadow: var(--text-shadow);
+	white-space: nowrap;
+}
+
+h2 {
+	font-size: var(--font-size-lg);
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+}
+
+h3 {
+	font-family: var(--font-body);
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.visibly-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.hover {
+	transition: transform 100ms;
+}
+
+.hover:hover {
+	filter: brightness(0.9);
+	transform: scale(1.1);
+}
+
+button {
+	background: none;
+	border: none;
+	color: inherit;
+	font-size: inherit;
+	text-decoration: underline;
+	cursor: pointer;
+}

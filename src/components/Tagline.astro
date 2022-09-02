@@ -9,5 +9,41 @@ const { tagline, taglineEm } = Astro.props as Props;
 
 <section>
 	<p>{tagline}</p>
-	<p><em>{taglineEm}</em></p>
+	<p><strong>{taglineEm}</strong></p>
 </section>
+
+<style>
+	section {
+		/* colors */
+		background-color: var(--color-primary);
+		background-image: url('/assets/tagline-bg.png');
+		background-size: cover;
+		background-position: center;
+		
+		/* inner layout */
+		margin: 0;
+		padding: 1em;
+		text-align: center;
+		
+		/* Font style */
+		font-family: var(--font-subheading);
+		color: var(--color-text-lt);
+		font-size: calc(1 * var(--font-size-md));
+		text-shadow: 0 1px 10px rgba(0, 0, 0, 25%);
+		letter-spacing: 2px;
+		
+		
+	}
+	
+	p {
+		margin: 0;
+		white-space: pre-wrap;
+		/* padding: 10px; */
+		line-height: normal;
+	}
+	
+	strong {
+		font-weight: inherit;
+		font-size: 1.2em;
+	}
+</style>

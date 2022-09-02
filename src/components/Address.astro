@@ -11,11 +11,33 @@ const {
 ---
 
 <address>
-	<p>{address1}</p>
-	<p>{address2}</p>
-	<p>
+	<span class="addr1">{address1}</span>
+	<span class="addr2">{address2}</span>
+	<span class="cityStateZip">
 		{city}{city && state ? ',' : ''}
-		{state}
-		{zip}
-	</p>
+		{state}&nbsp;
+		<span class="zip">{zip}</span>
+	</span>
 </address>
+
+<style>
+	
+	address {
+		font-style: normal;
+		white-space: nowrap;
+	}
+	
+	.cityStateZip {
+		display: flex;
+		flex-flow: column;
+	}
+	
+	@media screen and (min-aspect-ratio: 16 / 11) and (min-width: 768px) {
+
+		.cityStateZip {
+			flex-flow: row wrap;
+		}
+
+	}
+
+</style>

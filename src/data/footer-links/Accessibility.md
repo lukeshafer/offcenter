@@ -1,7 +1,6 @@
 ---
 title: Accessibility
-linkName: ''
-thumbnail: 'assets/placeholder-image.png'
+linkName: 'Accessibility'
 ---
 
 Off Center: Patio & Pub has partnered with Luke Shafer Web Design to build this website. In doing so, we are committed to creating a website that is accessible and usable for all people. Accessibility is very important to us, and we want to make sure everyone can have a positive experience on this website.

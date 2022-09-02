@@ -1,0 +1,116 @@
+---
+import Address from '../Address.astro';
+import type { Props as AddressProps } from '../Address.astro';
+import type { MarkdownInstance } from 'astro';
+import Hours from './Hours.astro';
+import Copyright from './Copyright.astro';
+import type { Hours as HoursType } from './Hours.astro';
+import Links from './Links.astro';
+import type { LinkFrontmatter } from './Links.astro';
+// type Hours = typeof import('../data/hours.json');
+
+export interface Props {
+	hours: HoursType;
+	email: string;
+	phone: string;
+
+	address: AddressProps['address'];
+	links: MarkdownInstance<LinkFrontmatter>[];
+}
+
+const { hours, email, address, links, phone } = Astro.props as Props;
+
+const formatPhone = (phone: string) => {
+	return `(${phone.substring(0, 3)}) ${phone.substring(
+		3,
+		6
+	)} - ${phone.substring(6, 10)}`;
+};
+---
+
+<footer>
+	<h2 class="visibly-hidden">More Info</h2>
+	<div class="hours">
+		<h3>Hours</h3>
+		<Hours hours={hours} />
+	</div>
+
+	<div class="contact">
+		<h3>Contact Us</h3>
+		<p><a href={`mailto:${email}`}>{email}</a></p>
+		<Address address={address} />
+		<p><a href={`tel:+1${phone}`}>{formatPhone(phone)}</a></p>
+	</div>
+
+	<Links links={links} />
+
+	<div class="copyright">
+		<Copyright />
+	</div>
+</footer>
+
+<style>
+	footer {
+		background-color: var(--color-primary);
+		color: var(--color-text-lt);
+
+		font-size: calc(0.85 * var(--font-size-base));
+
+		padding: 2rem 0.8rem;
+
+		/* inner layout */
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: repeat(2, 50%);
+		row-gap: 2rem;
+
+		& :global(h3) {
+			font-size: var(--font-size-base);
+			margin: 0;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.hours {
+		grid-column: 1 / 3;
+		align-self: center;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact,
+	:global(.links) {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.copyright {
+		grid-column: 1 / end;
+		text-align: center;
+		font-size: 0.8em;
+	}
+
+	@media screen and (min-width: 768px) {
+		footer {
+			grid-template-rows: repeat(2, auto);
+			grid-template-columns: repeat(3, calc(100% / 3));
+			grid-auto-flow: dense;
+		}
+
+		.hours {
+			grid-column: 2;
+		}
+	}
+</style>

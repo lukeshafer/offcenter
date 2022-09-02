@@ -17,4 +17,14 @@
 	cycleImages();
 </script>
 
-<img src={image.thumbnail} alt={image.alt} name={image.name} width="300px" />
+<img src={image.thumbnail} alt={image.alt} name={image.name} />
+
+<style>
+	img {
+		--img-size: 100%;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+</style>
