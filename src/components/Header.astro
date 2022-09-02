@@ -20,9 +20,9 @@ export interface Props {
 const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 ---
 
-<header >
+<header>
 	<div class="logo-title">
-		<img src={logo} alt="Logo" class="logo"/>
+		<img src={logo} alt="Logo" class="logo" />
 		<h1>
 			<span class="name">{name}</span>
 			<span class="subname">{subName}</span>
@@ -48,28 +48,33 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 </header>
 
 <style>
-
 	header {
 		background-color: var(--color-accent);
-		background: url('assets/waves.svg');
+		background: url('/assets/waves.svg');
 		background-size: cover;
-		color: var(--color-text-lt);	
-		
+		color: var(--color-text-lt);
+
 		/* box positioning */
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 999;
-		
+
 		/* Box width and height */
 		box-sizing: border-box;
 		width: clamp(65vw, 200vh - 100vw, 100%);
 		height: clamp(50%, 100vw, 100vh);
-		
+
 		/* Box shape */
 		--header-bottom-point: clamp(0px, 100vw - 100vh, 40vw);
 		--header-right-point: clamp(0vh, 100vh - 100vw, 30vh);
-		clip-path: polygon(0% 0%, 100% 0%, 100% var(--header-right-point), var(--header-bottom-point) 100%, 0% 100%);
+		clip-path: polygon(
+			0% 0%,
+			100% 0%,
+			100% var(--header-right-point),
+			var(--header-bottom-point) 100%,
+			0% 100%
+		);
 
 		/* Grid layout */
 		display: grid;
@@ -78,47 +83,47 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 		--row-hours: min-content;
 		--row-address: 1fr;
 
-		grid-template-rows: var(--row-socials) var(--row-title) var(--row-hours) var(--row-address);
+		grid-template-rows: var(--row-socials) var(--row-title) var(--row-hours) var(
+				--row-address
+			);
 		grid-template-columns: 60% 40%;
 
-		
 		/* Other layout */
 		padding: var(--margin-page-v) var(--margin-page-h) 5rem var(--margin-page-h);
 		transform-style: preserve-3d;
 	}
-	
+
 	.logo-title {
 		/* grid position */
 		grid-row: 1 / 3;
 		grid-column: 1 / 2;
 
 		font-size: var(--h-title-font);
-		
+
 		/* other formatting */
 		margin: 0;
-		
+
 		/* h1 contains 2 sub-elements */
 		display: grid;
 		gap: 0.2rem;
 		grid-template-rows: var(--row-socials) 1fr;
 		align-items: center;
-		
+
 		/* height: 100%; */
 	}
-	
+
 	.logo {
 		/* grid position */
 		height: var(--row-socials);
 		object-fit: contain;
 	}
-	
+
 	h1 {
 		display: flex;
 		flex-flow: column;
 		gap: 0.3rem;
 		margin: 0;
 		font-size: 1em;
-		
 
 		& span {
 			display: block;
@@ -126,26 +131,26 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 	}
 
 	.subname {
-			font-size: 0.7em;
-		}
+		font-size: 0.7em;
+	}
 
 	.name {
-			font-size: 1em;
-			text-transform: uppercase;
-		}
-	
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
 	.hours {
 		/* grid position */
 		margin-top: clamp(0rem, 10vw - 2rem, 10rem);
 		/* margin-top: 10rem; */
 		grid-column: 1 / end;
 	}
-	
+
 	.address {
 		margin-top: clamp(0.5rem, 5vw - 2rem, 2.5rem);
 		align-self: flex-start;
 		font-size: var(--h-address-font);
-			
+
 		/* text formatting */
 		font-weight: 600;
 		text-shadow: var(--text-shadow);
@@ -157,23 +162,23 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 		grid-column: 2;
 		justify-self: end;
 		align-self: center;
-		
 
 		display: flex;
 		justify-content: flex-end;
 		gap: 1em;
 	}
-	
+
 	@media screen and (min-width: 450px) and (max-width: 768px) {
 		.socials {
 			margin-right: clamp(0px, 20vw - 20vh, 9rem);
 		}
 	}
-	
+
 	@media screen and (min-aspect-ratio: 16 / 11) and (min-width: 768px) {
-	
 		header {
-			grid-template-rows: var(--row-title) var(--row-hours) var(--row-address) var(--row-socials);
+			grid-template-rows: var(--row-title) var(--row-hours) var(--row-address) var(
+					--row-socials
+				);
 		}
 
 		.logo-title {
@@ -182,26 +187,24 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 			display: flex;
 			align-items: center;
 			gap: 1.5rem;
-			
+
 			/* font-size: var(--font-size-xl-desktop); */
 
 			& .logo {
 				height: 1.2em;
 			}
-
 		}
-		
+
 		.socials {
 			grid-row: 4;
 			grid-column: 1;
 			justify-self: start;
 			align-self: end;
-		
+
 			font-size: var(--h-social-font);
-			
+
 			margin-left: calc(5rem - var(--margin-page-h));
 			margin-bottom: -2rem;
 		}
 	}
-
 </style>
