@@ -1,0 +1,14 @@
+{
+  "socials": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/offcenterhilliard/",
+      "icon": "facebook-f"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/offcenterhilliard/",
+      "icon": "instagram"
+    }
+  ]
+}

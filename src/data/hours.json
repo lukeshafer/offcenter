@@ -1,31 +1,37 @@
 {
 	"monday": {
-		"closed": true
+		"closed": true,
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"tuesday": {
-		"closed": true
+		"closed": true,
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"wednesday": {
 		"closed": false,
-		"openTime": "16:00",
-		"closeTime": "22:00"
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"thursday": {
 		"closed": false,
-		"openTime": "16:00",
-		"closeTime": "22:00"
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"friday": {
 		"closed": false,
-		"openTime": "16:00",
-		"closeTime": "22:00"
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"saturday": {
 		"closed": false,
-		"openTime": "16:00",
-		"closeTime": "22:00"
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	},
 	"sunday": {
-		"closed": true
+		"closed": true,
+		"openTime": "4:00 PM",
+		"closeTime": "10:00 PM"
 	}
 }

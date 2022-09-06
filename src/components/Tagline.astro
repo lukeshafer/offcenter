@@ -1,15 +1,18 @@
 ---
+import { marked } from 'marked';
+
 export interface Props {
 	tagline: string;
-	taglineEm: string;
 }
 
-const { tagline, taglineEm } = Astro.props as Props;
+const { tagline } = Astro.props as Props;
+
+// Markdown renders two newlines, but we only want one, then we render to HTMl
+const parsedTagline = marked.parseInline(tagline.replaceAll('\n\n', '\n'));
 ---
 
 <section>
-	<p>{tagline}</p>
-	<p><strong>{taglineEm}</strong></p>
+	<p set:html={parsedTagline}></p>
 </section>
 
 <style>
@@ -19,30 +22,28 @@ const { tagline, taglineEm } = Astro.props as Props;
 		background-image: url('/assets/tagline-bg.png');
 		background-size: cover;
 		background-position: center;
-		
+
 		/* inner layout */
 		margin: 0;
 		padding: 1em;
 		text-align: center;
-		
+
 		/* Font style */
 		font-family: var(--font-subheading);
 		color: var(--color-text-lt);
 		font-size: calc(1 * var(--font-size-md));
 		text-shadow: 0 1px 10px rgba(0, 0, 0, 25%);
 		letter-spacing: 2px;
-		
-		
 	}
-	
+
 	p {
 		margin: 0;
 		white-space: pre-wrap;
 		/* padding: 10px; */
 		line-height: normal;
 	}
-	
-	strong {
+
+	p > :global(strong) {
 		font-weight: inherit;
 		font-size: 1.2em;
 	}

@@ -1,0 +1,51 @@
+<script>
+	import CMS from 'netlify-cms-app';
+	import { mainInfo } from '../config/main-info';
+	import { socialMedia } from '../config/social-media';
+	import { hours } from '../config/hours';
+	import { articles } from '../config/articles';
+	import { gallery } from '../config/gallery';
+	import { otherInfo } from '../config/other-info';
+
+	import Main from '../components/cms/Main';
+	import Article from '../components/cms/Article';
+	import Hours from '../components/cms/Hours';
+	import Socials from '../components/cms/Socials';
+
+	CMS.registerPreviewTemplate('main-info', Main);
+	CMS.registerPreviewTemplate('sections', Article);
+	CMS.registerPreviewTemplate('hours', Hours);
+	CMS.registerPreviewTemplate('socials', Socials);
+
+	CMS.registerPreviewStyle('admin/previews.css');
+
+	CMS.init({
+		config: {
+			backend: {
+				name: 'git-gateway',
+			},
+			local_backend: true,
+			media_folder: 'public/uploads',
+			public_folder: '/uploads',
+			collections: [
+				{
+					name: 'main-settings',
+					label: 'Site Settings',
+					files: [mainInfo, socialMedia, hours],
+				},
+				articles,
+				gallery,
+				otherInfo,
+			],
+		},
+	});
+</script>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Off Center Admin</title>
+
+<body>
+	<!-- CMS needs a body to inject content-->
+</body>

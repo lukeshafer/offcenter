@@ -8,12 +8,22 @@ import Layout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Tagline from '../components/Tagline.astro';
-import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
-import Footer from '../components/footer/Footer.astro';
+import {
+	default as Footer,
+	type Props as FooterProps,
+} from '../components/footer/Footer.astro';
+import {
+	default as Sections,
+	type Props as SectionsProps,
+} from '../components/sections/Sections.astro';
 
-const sections = await Astro.glob('../data/sections/*.md');
-const links = await Astro.glob('../data/footer-links/*.md');
+const sections = (await Astro.glob(
+	'../data/sections/*.md'
+)) as SectionsProps['sections'];
+const links = (await Astro.glob(
+	'../data/footer-links/*.md'
+)) as FooterProps['links'];
 ---
 
 <Layout title="Off Center">
@@ -34,27 +44,14 @@ const links = await Astro.glob('../data/footer-links/*.md');
 	</div>
 
 	<main>
-		<Tagline tagline={mainInfo.tagline} taglineEm={mainInfo.taglineEm} />
+		<Tagline tagline={mainInfo.tagline} />
 
-		<section>
-			{
-				sections.map(({ Content, frontmatter }) => (
-					<Section>
-						<h2 slot="title">{frontmatter.title}</h2>
-						<img
-							slot="image"
-							src={frontmatter.thumbnail}
-							alt={frontmatter.alt}
-						/>
-						<Content />
-					</Section>
-				))
-			}
+		<Sections sections={sections}>
 			<h2>Feeling hungry?</h2>
 			<div class="button">
 				<Button link={mainInfo.orderLink}>Order now!</Button>
 			</div>
-		</section>
+		</Sections>
 
 		<Footer
 			hours={hours}
@@ -73,10 +70,6 @@ const links = await Astro.glob('../data/footer-links/*.md');
 		right: 0;
 		width: 100%;
 		height: 100vh;
-	}
-
-	section {
-		margin: 1em 0 3em;
 	}
 
 	h2,

@@ -2,20 +2,16 @@
 	"title": "Off Center Patio & Pub",
 	"name": "Off Center",
 	"subName": "Patio & Pub",
-	"logo": "/assets/logo.png",
-
+	"logo": "/uploads/logo.png",
 	"address": {
 		"address1": "5286 Center St",
 		"address2": "",
 		"city": "Hilliard",
 		"state": "OH",
-		"zip": "43230"
+		"zip": "43026"
 	},
-
 	"email": "info@offcenterhilliard.com",
 	"phone": "6147101160",
-
 	"orderLink": "https://offcenterhilliard.square.site/",
-	"tagline": "One Part Puerto Rico.\nOne Part New York.",
-	"taglineEm": "Two Parts Incredible."
+	"tagline": "One Part Puerto Rico.\n\nOne Part New York.\n\n**Two Parts Incredible.**"
 }

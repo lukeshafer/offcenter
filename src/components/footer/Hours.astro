@@ -1,46 +1,15 @@
 ---
-interface dayHoursClosed {
-	closed: true;
-	openTime: never;
-	closeTime: never;
-}
-
-interface dayHoursOpen {
-	closed: false;
-	openTime: string;
-	closeTime: string;
-}
-
-export type Hours = {
-	[key: string]: dayHoursOpen | dayHoursClosed;
-};
-
 export interface Props {
-	hours: Hours;
+	hours: {
+		[key: string]: {
+			closed: boolean;
+			openTime: string;
+			closeTime: string;
+		};
+	};
 }
 
 const { hours } = Astro.props as Props;
-
-const convertTime = (time: string) => {
-	const hourNum = Number(time.substring(0, 2));
-	const min = time.substring(3, 5);
-	let period: 'AM' | 'PM';
-	let returnHour: string;
-
-	// correct the hour
-	if (hourNum === 0) {
-		returnHour = '12';
-		period = 'AM';
-	} else if (hourNum > 12) {
-		returnHour = `${hourNum - 12}`;
-		period = 'PM';
-	} else {
-		returnHour = `${hourNum}`;
-		period = 'AM';
-	}
-
-	return `${returnHour}:${min} ${period}`;
-};
 ---
 
 <ul>
@@ -49,11 +18,7 @@ const convertTime = (time: string) => {
 			<li>
 				<p class="day">{key}</p>
 				<p class="hours">
-					{value.closed
-						? 'CLOSED'
-						: `${convertTime(value.openTime)} - ${convertTime(
-								value.closeTime
-						  )}`}
+					{value.closed ? 'CLOSED' : `${value.openTime} - ${value.closeTime}`}
 				</p>
 			</li>
 		))
@@ -65,6 +30,7 @@ const convertTime = (time: string) => {
 		list-style: none;
 		padding-inline-start: 0px;
 		padding-left: 0;
+		margin: 0;
 
 		width: 84%;
 

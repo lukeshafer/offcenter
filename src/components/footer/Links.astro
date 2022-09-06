@@ -7,25 +7,28 @@ export interface LinkFrontmatter {
 	linkName: string;
 }
 
+const toSnakeCase = (text: string) => text.toLowerCase().replaceAll(' ', '_');
+
 export interface Props {
 	links: MarkdownInstance<LinkFrontmatter>[];
+	className: string;
 }
 
-const { links } = Astro.props as Props;
+const { links, className } = Astro.props as Props;
 ---
 
-<div class="links">
+<div class={`links ${className}`}>
 	<h3>Links</h3>
 	<ul>
 		{
-			links.map(({ frontmatter, Content }) => (
+			links.map(({ frontmatter: { linkName, title }, Content }) => (
 				<li>
-					<button id={`${frontmatter.linkName}-modal`}>
-						{frontmatter.linkName}
+					<button id={`${toSnakeCase(title)}-modal`}>
+						{linkName || title}
 					</button>
 					<Modal
-						title={frontmatter.title}
-						triggerId={`${frontmatter.linkName}-modal`}
+						title={title}
+						triggerId={`${toSnakeCase(title)}-modal`}
 						closeText="Close">
 						<Content />
 					</Modal>
@@ -38,11 +41,14 @@ const { links } = Astro.props as Props;
 <style>
 	.links {
 		text-align: right;
+	}
 
-		& ul {
-			list-style: none;
-			margin: 0;
-		}
+	ul {
+		display: flex;
+		flex-flow: column;
+		gap: 1rem;
+		list-style: none;
+		margin: 0;
 	}
 
 	:global(.modal__content) {

@@ -1,0 +1,38 @@
+---
+import type { MarkdownInstance } from 'astro';
+import Section from './Section.astro';
+
+interface SectionFrontmatter {
+	title: string;
+	sort: number;
+	thumbnail: string;
+	alt: string;
+}
+
+export interface Props {
+	sections: MarkdownInstance<SectionFrontmatter>[];
+}
+
+const { sections } = Astro.props as Props;
+
+sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
+---
+
+<section>
+	{
+		sections.map(({ Content, frontmatter }) => (
+			<Section>
+				<h2 slot="title">{frontmatter.title}</h2>
+				<img slot="image" src={frontmatter.thumbnail} alt={frontmatter.alt} />
+				<Content />
+			</Section>
+		))
+	}
+	<slot />
+</section>
+
+<style>
+	section {
+		margin: 1em 0 3em;
+	}
+</style>
