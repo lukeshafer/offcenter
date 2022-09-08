@@ -41,6 +41,10 @@ header {
 	gap: 1rem;
 }
 
+img {
+	width: 80%;
+}
+
 .site-name {
 	font-weight: lighter;
 	white-space: nowrap;

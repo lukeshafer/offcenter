@@ -1,0 +1,101 @@
+---
+import Slideshow from '@components/landing/Slideshow.svelte';
+import Button from '@components/Button.astro';
+
+type Gallery = typeof import('@data/gallery.json');
+
+export interface Props {
+	gallery: Gallery;
+	orderLink: string;
+	phone: string;
+}
+
+const { gallery, orderLink, phone } = Astro.props as Props;
+
+const formatPhone = (phone: string) => {
+	return `(${phone.substring(0, 3)}) ${phone.substring(
+		3,
+		6
+	)} - ${phone.substring(6, 10)}`;
+};
+---
+
+<section>
+	<div class="gallery">
+		<Slideshow gallery={gallery} client:idle />
+	</div>
+
+	<div class="order">
+		<Button link={orderLink}>Order Online</Button>
+		<address>
+			or call <a href={`tel:+1${phone}`}>{formatPhone(phone)}</a>
+		</address>
+	</div>
+</section>
+
+<style>
+	section {
+		/* container position */
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		/* container size */
+		height: clamp(70%, 100vw, 100vh);
+		width: clamp(60vw, 100vw, 100vh);
+
+		/* inner layout */
+		display: grid;
+		grid-template-rows: 87vh 13vh;
+		grid-template-columns: 100%;
+		place-items: end;
+		place-content: end;
+	}
+
+	.gallery {
+		width: 100%;
+		height: 100%;
+		transform-style: inherit;
+
+		align-self: center;
+	}
+
+	address {
+		/* text styling */
+		font-family: var(--font-body);
+		color: var(--color-text-dk);
+		text-transform: uppercase;
+
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		font-size: var(--h-phone-font);
+
+		padding-top: calc(0.1 * var(--h-button-font));
+		align-self: start;
+	}
+
+	address > a {
+		color: var(--color-text-dk);
+	}
+
+	address > a:hover {
+		filter: contrast(0.1);
+	}
+
+	.order {
+		/* box size */
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-bg);
+
+		/* grid layout */
+		display: grid;
+		grid-template-rows: calc(0.9 * var(--h-button-font)) 1fr;
+		grid-template-columns: 100%;
+		place-items: end center;
+		place-content: center;
+
+		/* font styling */
+		font-size: var(--h-button-font);
+	}
+</style>

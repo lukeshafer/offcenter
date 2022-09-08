@@ -1,14 +1,17 @@
 ---
 import mainInfo from '../data/main-info.json';
-import gallery from '../data/gallery.json';
+// import gallery from '../data/gallery.json';
 import hours from '../data/hours.json';
 import socials from '../data/socials.json';
 
 import Layout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
+import Header from '../components/landing/Header.astro';
 import Tagline from '../components/Tagline.astro';
 import Button from '../components/Button.astro';
+import {
+	default as Hero,
+	type Props as HeroProps,
+} from '../components/landing/Hero.astro';
 import {
 	default as Footer,
 	type Props as FooterProps,
@@ -24,6 +27,9 @@ const sections = (await Astro.glob(
 const links = (await Astro.glob(
 	'../data/footer-links/*.md'
 )) as FooterProps['links'];
+const gallery = (await Astro.glob(
+	'../data/gallery/*.json'
+)) as HeroProps['gallery'];
 ---
 
 <Layout title="Off Center">
