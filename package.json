@@ -25,6 +25,7 @@
 		"sass": "^1.54.8"
 	},
 	"dependencies": {
+		"@astrojs/image": "^0.8.0",
 		"@astrojs/svelte": "^1.0.0",
 		"@fontsource/fredoka": "^4.5.6",
 		"@fontsource/fredoka-one": "^4.5.8",
