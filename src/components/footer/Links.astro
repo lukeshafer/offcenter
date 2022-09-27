@@ -51,6 +51,10 @@ const { links, className } = Astro.props as Props;
 		margin: 0;
 	}
 
+	li {
+		text-align: right;
+	}
+
 	:global(.modal__content) {
 		max-height: 80vh;
 		overflow-y: scroll;
@@ -59,10 +63,6 @@ const { links, className } = Astro.props as Props;
 		& > :global(h3) {
 			font-size: 2em;
 			margin: 0.5rem 0;
-		}
-
-		& :global(p) {
-			/* margin: 1em; */
 		}
 	}
 </style>

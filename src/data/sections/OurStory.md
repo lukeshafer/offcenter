@@ -1,8 +1,8 @@
 ---
 title: Our Story
 sort: 1
-thumbnail: uploads/placeholder-image.png
-alt: A placeholder
+thumbnail: uploads/tara-liz-joel.webp
+alt: "From left to right: Tara, Liz, and Joel smiling at the camera"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel metus vehicula, tincidunt lacus luctus, semper ipsum. In blandit, orci ac tristique cursus, arcu lacus semper leo, non fermentum purus ex vitae quam.
+We opened Off Center in 2021, but our story goes all the way back to 2013, when co-owners Joel and Tara became engaged in this very building, back when it was Benito’s.

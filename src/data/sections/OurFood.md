@@ -1,8 +1,8 @@
 ---
 title: Our Food
 sort: 2
-thumbnail: uploads/placeholder-image.png
-alt: A placeholder
+thumbnail: uploads/four-pizzas.jpeg
+alt: 'Four large pizzas with a variety of toppings'
 ---
 
-Phasellus in elementum magna, nec molestie tortor. Vivamus auctor nisi ut accumsan hendrerit. Curabitur rutrum laoreet lorem non faucibus. Fusce congue velit eu eros consequat, ut tincidunt mi vulputate. Suspendisse cursus aliquam nulla nec pharetra.
+We build our menu with high-quality and inclusive food options. In addition to our classic mozzarella, we have THREE delicious vegan cheese options for our pizzas, along with plenty of fresh toppings!

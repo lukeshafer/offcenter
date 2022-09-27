@@ -28,6 +28,7 @@
 </script>
 
 <div class="container">
+	<img src={gallery[0]?.thumbnail} alt={gallery[0]?.alt} name={gallery[0]?.title} style:display="none"/>
 	{#key image}
 		<img
 			in:fade={{
@@ -42,7 +43,8 @@
 			}}
 			src={image.thumbnail}
 			alt={image.alt}
-			name={image.title} />
+			name={image.title} 
+			hidden />
 	{/key}
 </div>
 
@@ -55,11 +57,17 @@
 	}
 
 	img {
+		display: block;
 		position: absolute;
 		--img-size: 100%;
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
 		object-position: center;
+
+		/* overflow: hidden; */
+		/* padding-left: 100%; */
+		/* background-image: url('https://picsum.photos/1000'); */
+		/* background-size: cover; */
 	}
 </style>
