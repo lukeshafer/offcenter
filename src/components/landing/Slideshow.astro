@@ -1,6 +1,4 @@
 ---
-import { Picture } from "@astrojs/image/components"
-
 export interface Props {
 	gallery: {
 		title: string;
@@ -11,6 +9,58 @@ export interface Props {
 
 const { gallery } = Astro.props as Props;
 ---
-<div class="container">
-	<Image src=
+
+<script>
+	const images = document.querySelectorAll(".gallery > img");
+	function updateImage(prev, next) {
+		addClass(next);
+		removeClass(prev);
+
+		prev = next;
+
+		if (++next >= images.length) next = 0;
+
+		setTimeout(() => updateImage(prev, next), 4000)
+	}
+
+	function addClass(index) {
+		images[index]?.classList.add("visible");
+	}
+
+	function removeClass(index) {
+		images[index]?.classList.remove("visible");
+	}
+
+	setTimeout(() => updateImage(0, 1), 5000)
+</script>
+
+<div class="gallery">
+	{gallery.map(({thumbnail, alt}, index) => (
+		<img src={thumbnail} alt={alt}  loading="lazy" style={`--index: ${index}`} class={index === 0 ? "visible" : ""}/>
+	))}
 </div>
+
+<style>
+	.gallery {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+	}
+
+	img {
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		opacity: 0;
+		transition: opacity 400ms;
+
+		&.visible {
+			opacity: 1;
+		}
+	}
+</style>

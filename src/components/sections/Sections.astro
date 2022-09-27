@@ -23,7 +23,7 @@ sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
 		sections.map(({ Content, frontmatter }) => (
 			<Section>
 				<h2 slot="title">{frontmatter.title}</h2>
-				<img slot="image" src={frontmatter.thumbnail} alt={frontmatter.alt} />
+				<img slot="image" src={frontmatter.thumbnail} alt={frontmatter.alt} loading="lazy" />
 				<Content />
 			</Section>
 		))

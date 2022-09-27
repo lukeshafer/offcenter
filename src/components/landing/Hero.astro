@@ -1,5 +1,5 @@
 ---
-import Slideshow from '@components/landing/Slideshow.svelte';
+import Slideshow from '@components/landing/Slideshow.astro';
 import Button from '@components/Button.astro';
 
 type Gallery = typeof import('@data/gallery.json');
@@ -22,7 +22,7 @@ const formatPhone = (phone: string) => {
 
 <section>
 	<div class="gallery">
-		<Slideshow gallery={gallery} client:idle />
+		<Slideshow gallery={gallery}  />
 	</div>
 
 	<div class="order">
