@@ -39,7 +39,7 @@ const { gallery } = Astro.props as Props;
 
 <div class="gallery">
 	{gallery.map(({thumbnail, alt}, index) => (
-		<Image src={importImage(thumbnail)} alt={alt}  loading="lazy" width={1000} aspectRatio="1:1" class={index === 0 ? "visible" : ""}/>
+		<Image src={importImage(thumbnail)} alt={alt}  loading="lazy" width={1000} aspectRatio="1:1" class={index === 0 ? "visible" : ""} format="webp"/>
 	))}
 </div>
 
