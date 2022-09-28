@@ -1,7 +1,7 @@
 ---
 title: Our Food
 sort: 2
-thumbnail: /uploads/four-pizzas.jpeg
+thumbnail: four-pizzas.jpeg
 alt: 'Four large pizzas with a variety of toppings'
 ---
 

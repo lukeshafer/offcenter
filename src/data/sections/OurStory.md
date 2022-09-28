@@ -1,7 +1,7 @@
 ---
 title: Our Story
 sort: 1
-thumbnail: /uploads/tara-liz-joel.webp
+thumbnail: tara-liz-joel.webp
 alt: 'From left to right: Tara, Liz, and Joel smiling at the camera'
 ---
 

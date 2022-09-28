@@ -1,6 +1,8 @@
 ---
 import type { MarkdownInstance } from 'astro';
 import Section from './Section.astro';
+import { Image } from "@astrojs/image/components"
+import { importImage } from "../../lib/importImage"
 
 interface SectionFrontmatter {
 	title: string;
@@ -23,7 +25,7 @@ sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
 		sections.map(({ Content, frontmatter }) => (
 			<Section>
 				<h2 slot="title">{frontmatter.title}</h2>
-				<img slot="image" src={frontmatter.thumbnail} alt={frontmatter.alt} loading="lazy" />
+				<Image slot="image" src={importImage(frontmatter.thumbnail)} alt={frontmatter.alt} loading="lazy" width={500} aspectRation="3:2" fit="cover"/>
 				<Content />
 			</Section>
 		))

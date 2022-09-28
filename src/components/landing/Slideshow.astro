@@ -1,4 +1,7 @@
 ---
+import { Image } from "@astrojs/image/components"
+import { importImage } from "src/lib/importImage";
+
 export interface Props {
 	gallery: {
 		title: string;
@@ -20,7 +23,7 @@ const { gallery } = Astro.props as Props;
 
 		if (++next >= images.length) next = 0;
 
-		setTimeout(() => updateImage(prev, next), 4000)
+		setTimeout(() => updateImage(prev, next), 5000)
 	}
 
 	function addClass(index) {
@@ -36,7 +39,7 @@ const { gallery } = Astro.props as Props;
 
 <div class="gallery">
 	{gallery.map(({thumbnail, alt}, index) => (
-		<img src={thumbnail} alt={alt}  loading="lazy" style={`--index: ${index}`} class={index === 0 ? "visible" : ""}/>
+		<Image src={importImage(thumbnail)} alt={alt}  loading="lazy" width={1000} aspectRatio="1:1" class={index === 0 ? "visible" : ""}/>
 	))}
 </div>
 

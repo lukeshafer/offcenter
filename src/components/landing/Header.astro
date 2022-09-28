@@ -5,6 +5,8 @@ import {
 	default as Address,
 	type Props as AddressProps,
 } from '../Address.astro';
+import { Image } from '@astrojs/image/components'
+import { importImage } from '../../lib/importImage'
 
 type Hours = typeof import('../../data/hours.json');
 type Socials = typeof import('../../data/socials.json');
@@ -24,7 +26,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 
 <header>
 	<div class="logo-title">
-		<img src={logo} alt="Logo" class="logo" />
+		<Image src={importImage(logo)} alt="Logo" class="logo" width={200} aspectRatio="1:1"/>
 		<h1>
 			<span class="name">{name}</span>
 			<span class="subname">{subName}</span>
@@ -117,6 +119,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 	.logo {
 		/* grid position */
 		height: var(--row-socials);
+		width: var(--row-socials);
 		object-fit: contain;
 	}
 
@@ -194,6 +197,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 
 			& .logo {
 				height: 1.2em;
+				width: 1.2em;
 			}
 		}
 
