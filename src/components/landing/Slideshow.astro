@@ -13,37 +13,6 @@ export interface Props {
 const { gallery } = Astro.props as Props;
 ---
 
-<script>
-	function updateImage(
-		images: NodeListOf<Element>,
-		prev: number,
-		next: number
-	) {
-		addClass(images, next);
-		removeClass(images, prev);
-
-		prev = next;
-
-		if (++next >= images.length) next = 0;
-
-		setTimeout(() => updateImage(images, prev, next), 5000);
-	}
-
-	function addClass(images: NodeListOf<Element>, index: number) {
-		images[index]?.classList.add('visible');
-	}
-
-	function removeClass(images: NodeListOf<Element>, index: number) {
-		images[index]?.classList.remove('visible');
-	}
-
-	window.addEventListener('load', () => {
-		const images = document.querySelectorAll('.gallery > img');
-		setTimeout(() => updateImage(images, 0, 1), 5000);
-		images.forEach((img) => img.classList.remove('hidden'));
-	});
-</script>
-
 <div class="gallery">
 	{
 		gallery.map(({ thumbnail, alt }, index) => (

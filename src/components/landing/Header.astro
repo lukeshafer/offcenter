@@ -42,7 +42,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 
 	<div class="hours">
 		{/* @ts-ignore */}
-		<TodaysHours hours={hours} client:idle />
+		<TodaysHours hours={hours} />
 	</div>
 
 	<div class="address">
