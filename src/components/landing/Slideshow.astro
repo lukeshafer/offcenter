@@ -14,28 +14,32 @@ const { gallery } = Astro.props as Props;
 ---
 
 <script>
-	const images = document.querySelectorAll('.gallery > img');
-	function updateImage(prev: number, next: number) {
-		addClass(next);
-		removeClass(prev);
+	function updateImage(
+		images: NodeListOf<Element>,
+		prev: number,
+		next: number
+	) {
+		addClass(images, next);
+		removeClass(images, prev);
 
 		prev = next;
 
 		if (++next >= images.length) next = 0;
 
-		setTimeout(() => updateImage(prev, next), 5000);
+		setTimeout(() => updateImage(images, prev, next), 5000);
 	}
 
-	function addClass(index: number) {
+	function addClass(images: NodeListOf<Element>, index: number) {
 		images[index]?.classList.add('visible');
 	}
 
-	function removeClass(index: number) {
+	function removeClass(images: NodeListOf<Element>, index: number) {
 		images[index]?.classList.remove('visible');
 	}
 
 	window.addEventListener('load', () => {
-		setTimeout(() => updateImage(0, 1), 5000);
+		const images = document.querySelectorAll('.gallery > img');
+		setTimeout(() => updateImage(images, 0, 1), 5000);
 		images.forEach((img) => img.classList.remove('hidden'));
 	});
 </script>
@@ -49,7 +53,7 @@ const { gallery } = Astro.props as Props;
 				loading={index === 0 ? 'eager' : 'lazy'}
 				width={1000}
 				aspectRatio="1:1"
-				class={index === 0 ? 'visible' : 'hidden'}
+				class={index === 0 ? 'visible' : ''}
 				format="webp"
 				hidden={index !== 0}
 			/>
@@ -80,8 +84,11 @@ const { gallery } = Astro.props as Props;
 			opacity: 1;
 		}
 
-		&.hidden {
-			display: none;
+		&[hidden] {
+			display: block;
+			&.hidden {
+				display: none;
+			}
 		}
 	}
 </style>

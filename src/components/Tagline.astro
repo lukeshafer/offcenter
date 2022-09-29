@@ -11,7 +11,14 @@ const { tagline } = Astro.props as Props;
 const parsedTagline = marked.parseInline(tagline.replaceAll('\n\n', '\n'));
 ---
 
-<section>
+<script>
+	window.addEventListener('load', () => {
+		const section = document.getElementById('tagline');
+		section?.classList.add('background');
+	});
+</script>
+
+<section id="tagline" style={`--bg: ''`}>
 	<p set:html={parsedTagline}></p>
 </section>
 
@@ -19,9 +26,12 @@ const parsedTagline = marked.parseInline(tagline.replaceAll('\n\n', '\n'));
 	section {
 		/* colors */
 		background-color: var(--color-primary);
-		background-image: url('/assets/tagline-bg.png');
 		background-size: cover;
 		background-position: center;
+
+		&.background {
+			background-image: url('/assets/tagline-bg.webp');
+		}
 
 		/* inner layout */
 		margin: 0;
