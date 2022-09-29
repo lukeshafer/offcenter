@@ -6,11 +6,6 @@ import image from '@astrojs/image';
 
 // https://astro.build/config
 export default defineConfig({
-	vite: {
-		ssr: {
-			noExternal: ['normalize'],
-		},
-	},
 	integrations: [
 		svelte(),
 		react(),
