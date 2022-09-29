@@ -32,7 +32,7 @@ const gallery = (await Astro.glob(
 )) as HeroProps['gallery'];
 ---
 
-<Layout title="Off Center">
+<Layout title={mainInfo.title} description={mainInfo.description}>
 	<div class="header-hero">
 		<Header
 			name={mainInfo.name}

@@ -16,11 +16,14 @@
 	--font-size-lg: clamp(2rem, 2vw + 1.6rem, 3rem);
 
 	--color-text-lt: #f5f5f5;
+	/* --color-text-lt: white; */
 	--color-text-dk: #211616;
 	--color-socials: #333333;
 
-	--color-primary: #29a2a3;
-	--color-accent: #ff612f;
+	/* --color-primary: #29a2a3; */
+	--color-primary: #0d7a7a;
+	/* --color-accent: #ea6036; */
+	--color-accent: #cd4820;
 	--color-bg: hsl(40, 18%, 97%);
 	--color-link: #d7e0f9;
 

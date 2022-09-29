@@ -6,7 +6,7 @@ export interface Props {
 const { link } = Astro.props as Props;
 ---
 
-<a href={link} class="hover">
+<a href={link} class="hover" rel="noreferrer">
 	<slot />
 </a>
 
@@ -15,16 +15,15 @@ const { link } = Astro.props as Props;
 		/* box styling */
 		background-color: var(--color-accent);
 		border-radius: 0.25em;
-		
+
 		/* box layout */
 		padding: 0.3em 0.5em;
-		
+
 		/* text styling */
 		color: var(--color-text-lt);
 		text-decoration: none;
 		font-family: var(--font-button);
 		font-size: 1em;
 		text-transform: uppercase;
-		
 	}
 </style>

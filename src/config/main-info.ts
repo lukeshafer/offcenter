@@ -11,6 +11,12 @@ export const mainInfo: CmsCollectionFile = {
 			widget: 'string',
 		},
 		{
+			label: 'Description',
+			name: 'description',
+			widget: 'string',
+			hint: 'The description shown on Google and other search results for this website.',
+		},
+		{
 			label: 'Main Name',
 			name: 'name',
 			widget: 'string',
