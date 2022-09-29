@@ -1,21 +1,21 @@
 ---
-import { Image } from "@astrojs/image/components"
-import { importImage } from "src/lib/importImage";
+import { Image } from '@astrojs/image/components';
+import { importImage } from 'src/lib/importImage';
 
 export interface Props {
 	gallery: {
 		title: string;
 		thumbnail: string;
 		alt: string;
-	}[]
+	}[];
 }
 
 const { gallery } = Astro.props as Props;
 ---
 
 <script>
-	const images = document.querySelectorAll(".gallery > img");
-	function updateImage(prev, next) {
+	const images = document.querySelectorAll('.gallery > img');
+	function updateImage(prev: number, next: number) {
 		addClass(next);
 		removeClass(prev);
 
@@ -23,24 +23,38 @@ const { gallery } = Astro.props as Props;
 
 		if (++next >= images.length) next = 0;
 
-		setTimeout(() => updateImage(prev, next), 5000)
+		setTimeout(() => updateImage(prev, next), 5000);
 	}
 
-	function addClass(index) {
-		images[index]?.classList.add("visible");
+	function addClass(index: number) {
+		images[index]?.classList.add('visible');
 	}
 
-	function removeClass(index) {
-		images[index]?.classList.remove("visible");
+	function removeClass(index: number) {
+		images[index]?.classList.remove('visible');
 	}
 
-	setTimeout(() => updateImage(0, 1), 5000)
+	window.addEventListener('load', () => {
+		setTimeout(() => updateImage(0, 1), 5000);
+		images.forEach((img) => img.classList.remove('hidden'));
+	});
 </script>
 
 <div class="gallery">
-	{gallery.map(({thumbnail, alt}, index) => (
-		<Image src={importImage(thumbnail)} alt={alt}  loading="lazy" width={1000} aspectRatio="1:1" class={index === 0 ? "visible" : ""} format="webp"/>
-	))}
+	{
+		gallery.map(({ thumbnail, alt }, index) => (
+			<Image
+				src={importImage(thumbnail)}
+				alt={alt}
+				loading={index === 0 ? 'eager' : 'lazy'}
+				width={1000}
+				aspectRatio="1:1"
+				class={index === 0 ? 'visible' : 'hidden'}
+				format="webp"
+				hidden={index !== 0}
+			/>
+		))
+	}
 </div>
 
 <style>
@@ -64,6 +78,10 @@ const { gallery } = Astro.props as Props;
 
 		&.visible {
 			opacity: 1;
+		}
+
+		&.hidden {
+			display: none;
 		}
 	}
 </style>
