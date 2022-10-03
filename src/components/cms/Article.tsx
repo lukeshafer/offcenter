@@ -14,7 +14,7 @@ export default function ({ entry: e }: PreviewTemplateComponentProps) {
 	return (
 		<article>
 			<h2>{title}</h2>
-			<img src={thumbnail} alt={alt}></img>
+			{/* <img src={`/src/assets/${thumbnail}`} alt={alt}></img> */}
 			<p dangerouslySetInnerHTML={{ __html: body }}></p>
 		</article>
 	);

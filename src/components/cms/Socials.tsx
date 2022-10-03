@@ -23,9 +23,7 @@ export default function ({ entry: e }: PreviewTemplateComponentProps) {
 				const title = social.get('name');
 				const iconName = toPascalCase(social.get('icon'));
 
-				console.log(validateIcon(iconName));
-
-				let Icon: any;
+				let Icon: typeof faBrands[FaIcon] | null;
 				if (validateIcon(iconName)) {
 					Icon = faBrands[iconName];
 				} else {
@@ -36,7 +34,7 @@ export default function ({ entry: e }: PreviewTemplateComponentProps) {
 					(Icon && (
 						<div className="social">
 							<a href={href} title={title} target="_blank" className="icon">
-								<Icon />
+								<Icon width={50} />
 							</a>
 							<p>{title}</p>
 						</div>

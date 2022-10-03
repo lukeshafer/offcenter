@@ -28,6 +28,7 @@ export const articles: CmsCollection = {
 			label: 'Image',
 			name: 'thumbnail',
 			widget: 'image',
+			hint: 'Note: Images do not work in the preview, but they will appear on the actual site.',
 			allow_multiple: false,
 		},
 		{

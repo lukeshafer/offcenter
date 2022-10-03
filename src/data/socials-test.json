@@ -9,6 +9,11 @@
       "name": "Instagram",
       "url": "https://www.instagram.com/offcenterhilliard/",
       "icon": "instagram"
+    },
+    {
+      "name": "Tiktok",
+      "url": "https://www.tiktok.com/@offcenterhilliard",
+      "icon": "Tiktok"
     }
   ]
 }

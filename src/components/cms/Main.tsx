@@ -30,7 +30,7 @@ export default function ({
 			<div className="window">
 				<header>
 					<div className="logo-title">
-						<img src={logo} alt="Logo" className="logo" />
+						{/* <img src={`/src/assets/${logo}`} alt="Logo" className="logo" /> */}
 						<h1 className="site-name">
 							<span className="name">{name}</span>
 							<span className="subname">{subName}</span>

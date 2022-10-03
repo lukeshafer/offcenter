@@ -30,6 +30,7 @@ export const mainInfo: CmsCollectionFile = {
 			label: 'Logo',
 			name: 'logo',
 			widget: 'image',
+			hint: 'Note: Images do not work in the preview, but they will appear on the actual site.',
 		},
 		{
 			label: 'Address',
