@@ -5,7 +5,7 @@
 	/* --h-title-font: calc(2 * var(--h-base-font)); */
 	--h-hours-font: min(1.05 * var(--h-base-font), 8.5vw);
 
-	--h-address-font: min(1 * var(--h-base-font), 8.2vw);
+	--h-address-font: min(0.9 * var(--h-base-font), 8.2vw);
 	/* old social font size clamp(1rem, 1.0vw + 0.2rem, 3rem); */
 	--h-social-font: calc(0.7 * var(--h-base-font));
 	--h-button-font: min(1.2 * var(--h-base-font), 8vw);

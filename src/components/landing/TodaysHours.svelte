@@ -66,7 +66,6 @@
 	};
 
 	let hoursToDisplay = getHourString(hours);
-	console.log(hoursToDisplay);
 </script>
 
 <p>{hoursToDisplay}</p>
