@@ -1,18 +1,18 @@
 {
-	"orderLink": "https://offcenterhilliard.square.site/",
-	"subName": "Patio & Pub",
-	"logo": "logo.png",
-	"name": "Off Center",
-	"phone": "6147101160",
-	"tagline": "One Part Puerto Rico.\n\nOne Part New York.\n\n**Two Parts Incredible.**",
-	"address": {
-		"address1": "5286 Center St",
-		"address2": "",
-		"city": "Hilliard",
-		"state": "OH",
-		"zip": "43026"
-	},
-	"title": "Off Center Patio & Pub",
-	"description": "Located in Hilliard, Ohio, Off Center serves pizza, appetizers, drinks, and more, drawing from our New York and Puerto Rican roots.",
-	"email": "info@offcenterhilliard.com"
+  "orderLink": "https://offcenterhilliard.square.site/",
+  "subName": "Patio & Pub",
+  "logo": "logo.png",
+  "name": "Off Center",
+  "phone": "614-710-1160",
+  "tagline": "One Part Puerto Rico.\n\nOne Part New York.\n\n**Two Parts Incredible.**",
+  "address": {
+    "address1": "5286 Center St",
+    "address2": "",
+    "city": "Hilliard",
+    "state": "OH",
+    "zip": "43026"
+  },
+  "title": "Off Center Patio & Pub",
+  "email": "info@offcenterhilliard.com",
+  "description": "Located in Hilliard, Ohio, Off Center serves pizza, appetizers, drinks, and more, drawing from our New York and Puerto Rican roots."
 }
