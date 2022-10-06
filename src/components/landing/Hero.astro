@@ -1,8 +1,9 @@
 ---
 import Slideshow from '@components/landing/Slideshow.astro';
 import Button from '@components/Button.astro';
+import type { Props as SlideshowProps } from "./Slideshow.astro"
 
-type Gallery = typeof import('@data/gallery.json');
+type Gallery = SlideshowProps["gallery"]
 
 export interface Props {
 	gallery: Gallery;
