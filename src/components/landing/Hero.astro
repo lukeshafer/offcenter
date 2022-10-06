@@ -13,6 +13,8 @@ export interface Props {
 const { gallery, orderLink, phone } = Astro.props as Props;
 
 const formatPhone = (phone: string) => {
+	phone = phone.replaceAll(/[^0-9]/g, '');
+
 	return `(${phone.substring(0, 3)}) ${phone.substring(
 		3,
 		6
@@ -22,7 +24,7 @@ const formatPhone = (phone: string) => {
 
 <section>
 	<div class="gallery">
-		<Slideshow gallery={gallery}  />
+		<Slideshow gallery={gallery} />
 	</div>
 
 	<div class="order">
@@ -54,7 +56,7 @@ const formatPhone = (phone: string) => {
 
 	.gallery {
 		width: 100%;
-		height: calc(max(70vh,min(100vw,100vh)) - 13vh);
+		height: calc(max(70vh, min(100vw, 100vh)) - 13vh);
 		transform-style: inherit;
 
 		align-self: end;
