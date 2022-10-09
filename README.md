@@ -23,4 +23,4 @@ To run a development build locally, run
 npm run dev
 ```
 
-and visit [localhost](http://localhost):8080 in your browser. 
+and visit [localhost](http://localhost):3000 in your browser. 
