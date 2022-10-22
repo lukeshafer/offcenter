@@ -39,7 +39,9 @@ const { links, className } = Astro.props as Props;
 </div>
 
 <style>
-	.links {
+	.links,
+	h3,
+	li {
 		text-align: right;
 	}
 
@@ -49,10 +51,6 @@ const { links, className } = Astro.props as Props;
 		gap: 1rem;
 		list-style: none;
 		margin: 0;
-	}
-
-	li {
-		text-align: right;
 	}
 
 	:global(.modal__content) {

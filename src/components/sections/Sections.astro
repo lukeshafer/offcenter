@@ -1,6 +1,5 @@
 ---
 import type { MarkdownInstance } from 'astro';
-import Section from './Section.astro';
 import { Image } from '@astrojs/image/components';
 import { importImage } from '../../lib/importImage';
 
@@ -20,10 +19,10 @@ const { sections } = Astro.props as Props;
 sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
 ---
 
-<section>
+<div>
 	{
 		sections.map(({ Content, frontmatter }) => (
-			<Section>
+			<article>
 				<h2 slot="title">{frontmatter.title}</h2>
 				<Image
 					slot="image"
@@ -35,14 +34,14 @@ sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
 					format="webp"
 				/>
 				<Content />
-			</Section>
+			</article>
 		))
 	}
 	<slot />
-</section>
+</div>
 
 <style>
-	section {
+	div {
 		margin: 1em 0 3em;
 	}
 
@@ -50,5 +49,44 @@ sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	article {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		place-content: center;
+		place-items: center;
+		gap: 1em;
+
+		font-size: var(--font-size-base);
+		padding: 1em 1em 0px;
+		margin: var(--margin-page-h);
+	}
+
+	article > * {
+		margin: 0;
+	}
+
+	article > img {
+		width: 100%;
+		background: white;
+	}
+
+	@media screen and (min-width: 768px) {
+		article {
+			grid-template-columns: repeat(2, min(50%, 25rem));
+			grid-template-rows: repeat(2, auto);
+			gap: 3em;
+		}
+
+		article > img {
+			grid-column: 1;
+			grid-row: 1 / 3;
+		}
+
+		article:nth-child(2n) > img {
+			grid-column: 2;
+		}
 	}
 </style>

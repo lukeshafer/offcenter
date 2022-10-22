@@ -39,11 +39,17 @@
 	--text-shadow: 0 1px 1px rgba(0, 0, 0, 25%);
 }
 
+*:focus,
+button:focus {
+	outline: 3px solid #00aaff;
+	border: none;
+}
+
 html {
 	font-family: system-ui, sans-serif;
 	font-size: var(--font-size-base);
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	background-color: var(--color-accent);
 }
 
 body {
@@ -53,6 +59,10 @@ body {
 
 	overflow-x: hidden;
 	height: 100%;
+}
+
+main {
+	background-color: var(--color-bg);
 }
 
 p {
@@ -92,13 +102,18 @@ h3 {
 	width: 1px;
 }
 
-.hover {
-	transition: transform 100ms;
+@media (prefers-reduced-motion: no-preference) {
+	.hover {
+		transition: transform 100ms;
+	}
+
+	.hover:hover {
+		transform: scale(1.1);
+	}
 }
 
 .hover:hover {
 	filter: brightness(0.9);
-	transform: scale(1.1);
 }
 
 button {

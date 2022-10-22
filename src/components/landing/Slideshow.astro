@@ -26,7 +26,9 @@ const { gallery } = Astro.props as Props;
 
 		if (++next >= images.length) next = 0;
 
-		setTimeout(() => updateImage(images, prev, next), 5000);
+		if (checkMotion.matches) {
+			setTimeout(() => updateImage(images, prev, next), 5000);
+		}
 	}
 
 	function addClass(images: NodeListOf<Element>, index: number) {
@@ -37,10 +39,16 @@ const { gallery } = Astro.props as Props;
 		images[index]?.classList.remove('visible');
 	}
 
+	const checkMotion = window.matchMedia(
+		'(prefers-reduced-motion: no-preference)'
+	);
+
 	window.addEventListener('load', () => {
 		const images = document.querySelectorAll('.gallery > img');
-		setTimeout(() => updateImage(images, 0, 1), 5000);
-		images.forEach((img) => img.classList.remove('hidden'));
+		if (checkMotion.matches) {
+			setTimeout(() => updateImage(images, 0, 1), 5000);
+			images.forEach((img) => img.classList.remove('hidden'));
+		}
 	});
 </script>
 
@@ -50,7 +58,6 @@ const { gallery } = Astro.props as Props;
 			<Image
 				src={importImage(thumbnail)}
 				alt={alt}
-				/*loading={index === 0 ? 'eager' : 'lazy'}*/
 				width={1100}
 				aspectRatio="1:1"
 				class={index === 0 ? 'visible' : ''}

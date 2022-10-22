@@ -18,12 +18,12 @@ const parsedTagline = marked.parseInline(tagline.replaceAll('\n\n', '\n'));
 	});
 </script>
 
-<section id="tagline" style={`--bg: ''`}>
+<div id="tagline" style={`--bg: ''`}>
 	<p set:html={parsedTagline}></p>
-</section>
+</div>
 
 <style>
-	section {
+	div {
 		/* colors */
 		background-color: var(--color-primary);
 		background-size: cover;

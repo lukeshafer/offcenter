@@ -8,12 +8,8 @@ export interface Props {
 const { hours } = Astro.props as Props;
 
 const hoursToDisplay = getHourString(hours);
-const time = new Date().getMinutes();
 ---
 
-<div hidden>
-	{time}
-</div>
 <p>{hoursToDisplay}</p>
 
 <style>

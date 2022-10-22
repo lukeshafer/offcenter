@@ -23,7 +23,7 @@ const formatPhone = (phone: string) => {
 };
 ---
 
-<section>
+<div class="wrapper">
 	<div class="gallery">
 		<Slideshow gallery={gallery} />
 	</div>
@@ -34,10 +34,10 @@ const formatPhone = (phone: string) => {
 			or call <a href={`tel:+1${phone}`}>{formatPhone(phone)}</a>
 		</address>
 	</div>
-</section>
+</div>
 
 <style>
-	section {
+	.wrapper {
 		/* container position */
 		position: absolute;
 		right: 0;
