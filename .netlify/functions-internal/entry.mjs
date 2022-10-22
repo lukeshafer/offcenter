@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/server.js';
 import { escape } from 'html-escaper';
 import mime from 'mime';
 import sharp$1 from 'sharp';
-import { $ as $$module1$9, a as $$module2$4, b as $$module3$2 } from './chunks/index.3ce08f93.0509f3b4.mjs';
+import { $ as $$module1$8, a as $$module2$4, b as $$module3$2 } from './chunks/index.3ce08f93.3adb8b07.mjs';
 import * as faBrands from '@styled-icons/fa-brands';
 import * as $$module2$3 from 'js-convert-case';
 import { toPascalCase } from 'js-convert-case';
@@ -18,7 +18,7 @@ import MagicString from 'magic-string';
 import { Readable } from 'node:stream';
 import slash from 'slash';
 import sizeOf from 'image-size';
-import * as $$module1$8 from 'marked';
+import * as $$module1$7 from 'marked';
 import { marked } from 'marked';
 import 'cookie';
 import 'string-width';
@@ -1857,7 +1857,7 @@ const mainInfo = {
 	description: description
 };
 
-const $$module1$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	orderLink,
 	subName,
@@ -1956,24 +1956,24 @@ var __freeze$4 = Object.freeze;
 var __defProp$4 = Object.defineProperty;
 var __template$4 = (cooked, raw) => __freeze$4(__defProp$4(cooked, "raw", { value: __freeze$4(raw || cooked.slice()) }));
 var _a$4;
-const $$metadata$a = createMetadata("/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro", { modules: [{ module: $$module1$9, specifier: "@fontsource/fredoka-one", assert: {} }, { module: $$module2$4, specifier: "@fontsource/patua-one", assert: {} }, { module: $$module3$2, specifier: "@fontsource/rammetto-one", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$r = createAstro("/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$metadata$9 = createMetadata("/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro", { modules: [{ module: $$module1$8, specifier: "@fontsource/fredoka-one", assert: {} }, { module: $$module2$4, specifier: "@fontsource/patua-one", assert: {} }, { module: $$module3$2, specifier: "@fontsource/rammetto-one", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$q = createAstro("/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$r, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$q, $$props, $$slots);
   Astro2.self = $$BaseLayout;
   const { title, description } = Astro2.props;
   return renderTemplate(_a$4 || (_a$4 = __template$4(['<html lang="en">\n	<head>\n		<meta charset="UTF-8">\n		<meta name="viewport" content="width=device-width">\n		<link rel="icon" type="image/x-icon" href="/favicon.ico">\n		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">\n		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">\n		<link rel="manifest" href="/site.webmanifest">\n		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">\n		<meta name="msapplication-TileColor" content="#da532c">\n		<meta name="theme-color" content="#da532c">\n		<meta name="description"', '>\n		<meta name="\n			generator"', ">\n		<title>", '</title>\n		<!-- <script\n			is:inline\n			async\n			src="https://identity.netlify.com/v1/netlify-identity-widget.js"\n		><\/script> -->\n	', "</head>\n\n	<body>\n		", "\n	</body></html>"])), addAttribute(description, "content"), addAttribute(Astro2.generator, "content"), title, renderHead($$result), renderSlot($$result, $$slots["default"]));
 });
 
-const $$file$a = "/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro";
-const $$url$a = undefined;
+const $$file$9 = "/home/luke/repos/client-work/offcenter/src/layouts/BaseLayout.astro";
+const $$url$9 = undefined;
 
 const $$module4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$a,
+	$$metadata: $$metadata$9,
 	default: $$BaseLayout,
-	file: $$file$a,
-	url: $$url$a
+	file: $$file$9,
+	url: $$url$9
 }, Symbol.toStringTag, { value: 'Module' }));
 
 var WeekDay = /* @__PURE__ */ ((WeekDay2) => {
@@ -2024,15 +2024,15 @@ ${formatHourRange(dayHours)}`;
   }
 };
 
-const $$module1$6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHourString
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$9 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro", { modules: [{ module: $$module1$6, specifier: "@lib/dateHelpers", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$q = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$metadata$8 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro", { modules: [{ module: $$module1$5, specifier: "@lib/dateHelpers", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$p = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$TodaysHours = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$q, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$p, $$props, $$slots);
   Astro2.self = $$TodaysHours;
   const { hours } = Astro2.props;
   const hoursToDisplay = getHourString(hours);
@@ -2048,21 +2048,21 @@ const $$TodaysHours = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$9 = "/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro";
-const $$url$9 = undefined;
+const $$file$8 = "/home/luke/repos/client-work/offcenter/src/components/landing/TodaysHours.astro";
+const $$url$8 = undefined;
 
-const $$module1$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$9,
+	$$metadata: $$metadata$8,
 	default: $$TodaysHours,
-	file: $$file$9,
-	url: $$url$9
+	file: $$file$8,
+	url: $$url$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$8 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro", { modules: [{ module: faBrands, specifier: "@styled-icons/fa-brands", assert: {} }, { module: $$module2$3, specifier: "js-convert-case", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$p = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$metadata$7 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro", { modules: [{ module: faBrands, specifier: "@styled-icons/fa-brands", assert: {} }, { module: $$module2$3, specifier: "js-convert-case", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$o = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Social = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$p, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$o, $$props, $$slots);
   Astro2.self = $$Social;
   let { name, link, icon } = Astro2.props;
   icon = toPascalCase(icon);
@@ -2092,21 +2092,21 @@ const $$Social = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$8 = "/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro";
-const $$url$8 = undefined;
+const $$file$7 = "/home/luke/repos/client-work/offcenter/src/components/landing/Social.astro";
+const $$url$7 = undefined;
 
 const $$module2$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$8,
+	$$metadata: $$metadata$7,
 	default: $$Social,
-	file: $$file$8,
-	url: $$url$8
+	file: $$file$7,
+	url: $$url$7
 }, Symbol.toStringTag, { value: 'Module' }));
 
 createMetadata("/home/luke/repos/client-work/offcenter/src/components/Address.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$o = createAstro("/home/luke/repos/client-work/offcenter/src/components/Address.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$Astro$n = createAstro("/home/luke/repos/client-work/offcenter/src/components/Address.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Address = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$o, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$n, $$props, $$slots);
   Astro2.self = $$Address;
   const {
     address: { address1, address2, city, state, zip }
@@ -2587,7 +2587,7 @@ function integration(options = {}) {
             entryPoint: "@astrojs/image/endpoint"
           });
         }
-        const { default: defaultLoader } = await (resolvedOptions.serviceEntryPoint === "@astrojs/image/sharp" ? Promise.resolve().then(() => sharp) : import('./chunks/squoosh.61c90824.mjs'));
+        const { default: defaultLoader } = await (resolvedOptions.serviceEntryPoint === "@astrojs/image/sharp" ? Promise.resolve().then(() => sharp) : import('./chunks/squoosh.46428245.mjs'));
         globalThis.astroImage = {
           defaultLoader
         };
@@ -2632,17 +2632,17 @@ function integration(options = {}) {
   };
 }
 
-const $$module1$4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	default: integration,
 	getImage,
 	getPicture
 }, Symbol.toStringTag, { value: 'Module' }));
 
-createMetadata("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Image.astro", { modules: [{ module: $$module1$4, specifier: "../dist/index.js", assert: {} }, { module: $$module2, specifier: "./index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$n = createAstro("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Image.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+createMetadata("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Image.astro", { modules: [{ module: $$module1$3, specifier: "../dist/index.js", assert: {} }, { module: $$module2, specifier: "./index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$m = createAstro("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Image.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$n, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$m, $$props, $$slots);
   Astro2.self = $$Image;
   const { loading = "lazy", decoding = "async", ...props } = Astro2.props;
   if (props.alt === void 0 || props.alt === null) {
@@ -2657,10 +2657,10 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-createMetadata("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Picture.astro", { modules: [{ module: $$module1$4, specifier: "../dist/index.js", assert: {} }, { module: $$module2, specifier: "./index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$m = createAstro("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Picture.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+createMetadata("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Picture.astro", { modules: [{ module: $$module1$3, specifier: "../dist/index.js", assert: {} }, { module: $$module2, specifier: "./index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$l = createAstro("/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/components/Picture.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$m, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$l, $$props, $$slots);
   Astro2.self = $$Picture;
   const {
     src,
@@ -2775,10 +2775,10 @@ const $$module3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 	importImage
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$7 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro", { modules: [{ module: $$module1$5, specifier: "./TodaysHours.astro", assert: {} }, { module: $$module2$1, specifier: "./Social.astro", assert: {} }, { module: $$module2, specifier: "@astrojs/image/components", assert: {} }, { module: $$module3, specifier: "../../lib/importImage", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$l = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$metadata$6 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro", { modules: [{ module: $$module1$4, specifier: "./TodaysHours.astro", assert: {} }, { module: $$module2$1, specifier: "./Social.astro", assert: {} }, { module: $$module2, specifier: "@astrojs/image/components", assert: {} }, { module: $$module3, specifier: "../../lib/importImage", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$k = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$l, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$k, $$props, $$slots);
   Astro2.self = $$Header;
   const { name, subName, logo, hours, socials, address } = Astro2.props;
   const STYLES = [];
@@ -2809,26 +2809,26 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$7 = "/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro";
-const $$url$7 = undefined;
+const $$file$6 = "/home/luke/repos/client-work/offcenter/src/components/landing/Header.astro";
+const $$url$6 = undefined;
 
 const $$module5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$7,
+	$$metadata: $$metadata$6,
 	default: $$Header,
-	file: $$file$7,
-	url: $$url$7
+	file: $$file$6,
+	url: $$url$6
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$6 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/Tagline.astro", { modules: [{ module: $$module1$8, specifier: "marked", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
+const $$metadata$5 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/Tagline.astro", { modules: [{ module: $$module1$7, specifier: "marked", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
 	window.addEventListener('load', () => {
 		const section = document.getElementById('tagline');
 		section?.classList.add('background');
 	});
 ` }] });
-const $$Astro$k = createAstro("/home/luke/repos/client-work/offcenter/src/components/Tagline.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$Astro$j = createAstro("/home/luke/repos/client-work/offcenter/src/components/Tagline.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Tagline = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$k, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$j, $$props, $$slots);
   Astro2.self = $$Tagline;
   const { tagline } = Astro2.props;
   const parsedTagline = marked.parseInline(tagline.replaceAll("\n\n", "\n"));
@@ -2844,21 +2844,21 @@ const $$Tagline = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$6 = "/home/luke/repos/client-work/offcenter/src/components/Tagline.astro";
-const $$url$6 = undefined;
+const $$file$5 = "/home/luke/repos/client-work/offcenter/src/components/Tagline.astro";
+const $$url$5 = undefined;
 
 const $$module6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$6,
+	$$metadata: $$metadata$5,
 	default: $$Tagline,
-	file: $$file$6,
-	url: $$url$6
+	file: $$file$5,
+	url: $$url$5
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$5 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/Button.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$j = createAstro("/home/luke/repos/client-work/offcenter/src/components/Button.astro", "", "file:///home/luke/repos/client-work/offcenter/");
+const $$metadata$4 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/Button.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$i = createAstro("/home/luke/repos/client-work/offcenter/src/components/Button.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Button = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$j, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$i, $$props, $$slots);
   Astro2.self = $$Button;
   const { link } = Astro2.props;
   const STYLES = [];
@@ -2871,76 +2871,18 @@ const $$Button = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$5 = "/home/luke/repos/client-work/offcenter/src/components/Button.astro";
-const $$url$5 = undefined;
+const $$file$4 = "/home/luke/repos/client-work/offcenter/src/components/Button.astro";
+const $$url$4 = undefined;
 
 const $$module7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	$$metadata: $$metadata$5,
-	default: $$Button,
-	file: $$file$5,
-	url: $$url$5
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const $$metadata$4 = createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Slideshow.astro", { modules: [{ module: $$module2, specifier: "@astrojs/image/components", assert: {} }, { module: $$module3, specifier: "src/lib/importImage", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
-	function updateImage(
-		images: NodeListOf<Element>,
-		prev: number,
-		next: number
-	) {
-		addClass(images, next);
-		removeClass(images, prev);
-
-		prev = next;
-
-		if (++next >= images.length) next = 0;
-
-		setTimeout(() => updateImage(images, prev, next), 5000);
-	}
-
-	function addClass(images: NodeListOf<Element>, index: number) {
-		images[index]?.classList.add('visible');
-	}
-
-	function removeClass(images: NodeListOf<Element>, index: number) {
-		images[index]?.classList.remove('visible');
-	}
-
-	window.addEventListener('load', () => {
-		const images = document.querySelectorAll('.gallery > img');
-		setTimeout(() => updateImage(images, 0, 1), 5000);
-		images.forEach((img) => img.classList.remove('hidden'));
-	});
-` }] });
-const $$Astro$i = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Slideshow.astro", "", "file:///home/luke/repos/client-work/offcenter/");
-const $$Slideshow = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$i, $$props, $$slots);
-  Astro2.self = $$Slideshow;
-  const { gallery } = Astro2.props;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}
-
-<div class="gallery astro-GIJLZSYD">
-	${gallery.map(({ thumbnail, alt }, index) => renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": importImage(thumbnail), "alt": alt, "loading": index === 0 ? "eager" : "lazy", "width": 1100, "aspectRatio": "1:1", "class": (index === 0 ? "visible" : "") + " astro-GIJLZSYD", "format": "webp", "hidden": index !== 0 })}`)}
-</div>
-
-`;
-});
-
-const $$file$4 = "/home/luke/repos/client-work/offcenter/src/components/landing/Slideshow.astro";
-const $$url$4 = undefined;
-
-const $$module1$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
 	$$metadata: $$metadata$4,
-	default: $$Slideshow,
+	default: $$Button,
 	file: $$file$4,
 	url: $$url$4
 }, Symbol.toStringTag, { value: 'Module' }));
 
-createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Hero.astro", { modules: [{ module: $$module1$3, specifier: "@components/landing/Slideshow.astro", assert: {} }, { module: $$module7, specifier: "@components/Button.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+createMetadata("/home/luke/repos/client-work/offcenter/src/components/landing/Hero.astro", { modules: [{ module: $$module7, specifier: "@components/Button.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
 const $$Astro$h = createAstro("/home/luke/repos/client-work/offcenter/src/components/landing/Hero.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$h, $$props, $$slots);
@@ -2956,15 +2898,15 @@ const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<section class="astro-NK44OD75">
-	<div class="gallery astro-NK44OD75">
-		${renderComponent($$result, "Slideshow", $$Slideshow, { "gallery": gallery, "class": "astro-NK44OD75" })}
+  return renderTemplate`${maybeRenderHead($$result)}<section class="astro-32FJ65JW">
+	<div class="gallery astro-32FJ65JW">
+		<!--<Slideshow gallery={gallery} />-->
 	</div>
 
-	<div class="order astro-NK44OD75">
-		${renderComponent($$result, "Button", $$Button, { "link": orderLink, "class": "astro-NK44OD75" }, { "default": () => renderTemplate`Order Online` })}
-		<address class="astro-NK44OD75">
-			or call <a${addAttribute(`tel:+1${phone}`, "href")} class="astro-NK44OD75">${formatPhone(phone)}</a>
+	<div class="order astro-32FJ65JW">
+		${renderComponent($$result, "Button", $$Button, { "link": orderLink, "class": "astro-32FJ65JW" }, { "default": () => renderTemplate`Order Online` })}
+		<address class="astro-32FJ65JW">
+			or call <a${addAttribute(`tel:+1${phone}`, "href")} class="astro-32FJ65JW">${formatPhone(phone)}</a>
 		</address>
 	</div>
 </section>
@@ -3828,14 +3770,14 @@ const $$Sections = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$metadata$1 = createMetadata("/home/luke/repos/client-work/offcenter/src/pages/index.astro", { modules: [{ module: $$module1$7, specifier: "../data/main-info.json", assert: {} }, { module: $$module2$2, specifier: "../data/hours.json", assert: {} }, { module: $$module3$1, specifier: "../data/socials.json", assert: {} }, { module: $$module4, specifier: "../layouts/BaseLayout.astro", assert: {} }, { module: $$module5, specifier: "../components/landing/Header.astro", assert: {} }, { module: $$module6, specifier: "../components/Tagline.astro", assert: {} }, { module: $$module7, specifier: "../components/Button.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$metadata$1 = createMetadata("/home/luke/repos/client-work/offcenter/src/pages/index.astro", { modules: [{ module: $$module1$6, specifier: "../data/main-info.json", assert: {} }, { module: $$module2$2, specifier: "../data/hours.json", assert: {} }, { module: $$module3$1, specifier: "../data/socials.json", assert: {} }, { module: $$module4, specifier: "../layouts/BaseLayout.astro", assert: {} }, { module: $$module5, specifier: "../components/landing/Header.astro", assert: {} }, { module: $$module6, specifier: "../components/Tagline.astro", assert: {} }, { module: $$module7, specifier: "../components/Button.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
 const $$Astro$1 = createAstro("/home/luke/repos/client-work/offcenter/src/pages/index.astro", "", "file:///home/luke/repos/client-work/offcenter/");
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Index;
-  const sections = await Astro2.glob(/* #__PURE__ */ Object.assign({"../data/sections/OurFood.md": () => import('./chunks/OurFood.d6f09947.mjs'),"../data/sections/OurStory.md": () => import('./chunks/OurStory.23b4e641.mjs')}), () => "../data/sections/*.md");
+  const sections = await Astro2.glob(/* #__PURE__ */ Object.assign({"../data/sections/OurFood.md": () => import('./chunks/OurFood.31d69efc.mjs'),"../data/sections/OurStory.md": () => import('./chunks/OurStory.769608cc.mjs')}), () => "../data/sections/*.md");
   const links = await Astro2.glob(
-    /* #__PURE__ */ Object.assign({"../data/footer-links/Accessibility.md": () => import('./chunks/Accessibility.ccf696b6.mjs')}),
+    /* #__PURE__ */ Object.assign({"../data/footer-links/Accessibility.md": () => import('./chunks/Accessibility.fae3e282.mjs')}),
     () => "../data/footer-links/*.md"
   );
   const gallery = await Astro2.glob(/* #__PURE__ */ Object.assign({"../data/gallery/vegan-pepperoni.json": () => import('./chunks/vegan-pepperoni.54162cfe.mjs'),"../data/gallery/veggie-calzone.json": () => import('./chunks/veggie-calzone.02ba47a6.mjs'),"../data/gallery/veggie-pizza.json": () => import('./chunks/veggie-pizza.0b4fc6ef.mjs')}), () => "../data/gallery/*.json");
@@ -4022,7 +3964,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.51b076e3.css"],"scripts":[{"type":"inline","value":"window.addEventListener(\"load\",()=>{document.getElementById(\"tagline\")?.classList.add(\"background\")});function d(e,s,t){i(e,t),o(e,s),s=t,++t>=e.length&&(t=0),setTimeout(()=>d(e,s,t),5e3)}function i(e,s){e[s]?.classList.add(\"visible\")}function o(e,s){e[s]?.classList.remove(\"visible\")}window.addEventListener(\"load\",()=>{const e=document.querySelectorAll(\".gallery > img\");setTimeout(()=>d(e,0,1),5e3),e.forEach(s=>s.classList.remove(\"hidden\"))});\n"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[{"type":"external","value":"hoisted.9ad910bf.js"}],"routeData":{"route":"/admin","type":"page","pattern":"^\\/admin\\/?$","segments":[[{"content":"admin","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/admin.astro","pathname":"/admin","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/home/luke/repos/client-work/offcenter/src/data/sections/OurFood.md":"chunks/OurFood.d6f09947.mjs","/home/luke/repos/client-work/offcenter/src/data/sections/OurStory.md":"chunks/OurStory.23b4e641.mjs","/home/luke/repos/client-work/offcenter/src/data/footer-links/Accessibility.md":"chunks/Accessibility.ccf696b6.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/vegan-pepperoni.json":"chunks/vegan-pepperoni.54162cfe.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/veggie-calzone.json":"chunks/veggie-calzone.02ba47a6.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/veggie-pizza.json":"chunks/veggie-pizza.0b4fc6ef.mjs","/home/luke/repos/client-work/offcenter/src/assets/logo.png":"chunks/logo.53e726dc.mjs","/home/luke/repos/client-work/offcenter/src/assets/placeholder-image.png":"chunks/placeholder-image.37aa72c4.mjs","/home/luke/repos/client-work/offcenter/src/assets/Project 5.jpg":"chunks/Project 5.4dcad6b2.mjs","/home/luke/repos/client-work/offcenter/src/assets/Veggie Edit.jpg":"chunks/Veggie Edit.7b535308.mjs","/home/luke/repos/client-work/offcenter/src/assets/pepperoni.jpg":"chunks/pepperoni.785298fd.mjs","/home/luke/repos/client-work/offcenter/src/assets/pizza.jpg":"chunks/pizza.5c2fe7d3.mjs","/home/luke/repos/client-work/offcenter/src/assets/four-pizzas.jpeg":"chunks/four-pizzas.f77db63a.mjs","/home/luke/repos/client-work/offcenter/src/assets/joel-cooking.webp":"chunks/joel-cooking.765efe7c.mjs","/home/luke/repos/client-work/offcenter/src/assets/tara-liz-joel.webp":"chunks/tara-liz-joel.e19cdf90.mjs","/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/dist/loaders/squoosh.js":"chunks/squoosh.61c90824.mjs","@astrojs/svelte/client.js":"client.8b7d56e5.js","@astrojs/react/client-v17.js":"client-v17.ee53602d.js","/astro/hoisted.js?q=0":"hoisted.9ad910bf.js","/astro/hoisted.js?q=1":"hoisted.95518a6c.js","astro:scripts/before-hydration.js":""},"assets":["/assets/fredoka-hebrew-600-normal.02b6c5ad.woff2","/assets/fredoka-latin-600-normal.77a0113a.woff2","/assets/fredoka-hebrew-variable-wghtOnly-normal.e554c745.woff2","/assets/fredoka-latin-variable-wghtOnly-normal.f84e8d50.woff2","/assets/fredoka-one-latin-400-normal.e9986c62.woff2","/assets/montserrat-cyrillic-ext-500-normal.cb7edefd.woff2","/assets/montserrat-cyrillic-500-normal.ef388264.woff2","/assets/montserrat-latin-ext-500-normal.b9557b7d.woff2","/assets/montserrat-latin-500-normal.ed121b1a.woff2","/assets/montserrat-cyrillic-ext-variable-wghtOnly-normal.3fef5946.woff2","/assets/montserrat-cyrillic-variable-wghtOnly-normal.a8447cde.woff2","/assets/montserrat-latin-variable-wghtOnly-normal.ae919a7c.woff2","/assets/montserrat-latin-ext-variable-wghtOnly-normal.cffe1393.woff2","/assets/montserrat-vietnamese-variable-wghtOnly-normal.56544b89.woff2","/assets/montserrat-cyrillic-variable-wghtOnly-italic.8a7e993e.woff2","/assets/montserrat-cyrillic-ext-variable-wghtOnly-italic.15d402e4.woff2","/assets/montserrat-latin-variable-wghtOnly-italic.33befdbb.woff2","/assets/montserrat-latin-ext-variable-wghtOnly-italic.9df5f242.woff2","/assets/montserrat-vietnamese-variable-wghtOnly-italic.a48afdb0.woff2","/assets/patua-one-latin-400-normal.74609e16.woff2","/assets/rammetto-one-latin-ext-400-normal.7470abeb.woff2","/assets/rammetto-one-latin-400-normal.2edfb644.woff2","/assets/fredoka-all-600-normal.99f01391.woff","/assets/fredoka-one-all-400-normal.bc136881.woff","/assets/montserrat-all-500-normal.6c5dce7b.woff","/assets/patua-one-all-400-normal.de1dbd7e.woff","/assets/rammetto-one-all-400-normal.51c4584d.woff","/assets/logo.9487d5f5.png","/assets/four-pizzas.605883e8.jpeg","/assets/tara-liz-joel.f2fc23e4.webp","/assets/placeholder-image.5a3297b8.png","/assets/joel-cooking.cfadc3c5.webp","/assets/Veggie Edit.219f43ea.jpg","/assets/Project 5.16a0fa2c.jpg","/assets/pepperoni.5f72aa24.jpg","/assets/pizza.ceb274e2.jpg","/assets/index.51b076e3.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/browserconfig.xml","/client-v17.ee53602d.js","/client.8b7d56e5.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/favicon.png","/hoisted.9ad910bf.js","/mstile-150x150.png","/placeholder-image.png","/safari-pinned-tab.svg","/site.webmanifest","/admin/previews.css","/assets/tagline-bg copy.webp","/assets/tagline-bg.webp","/assets/waves.svg","/chunks/index.62475350.js","/uploads/Project 5.jpg","/uploads/Veggie Edit.jpg","/uploads/four-pizzas.jpeg","/uploads/joel-cooking.webp","/uploads/logo.png","/uploads/pepperoni.jpg","/uploads/pizza.jpg","/uploads/placeholder-image.png","/uploads/tara-liz-joel.webp"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.50141040.css"],"scripts":[{"type":"inline","value":"window.addEventListener(\"load\",()=>{document.getElementById(\"tagline\")?.classList.add(\"background\")});\n"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[{"type":"external","value":"hoisted.435d66b4.js"}],"routeData":{"route":"/admin","type":"page","pattern":"^\\/admin\\/?$","segments":[[{"content":"admin","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/admin.astro","pathname":"/admin","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/home/luke/repos/client-work/offcenter/src/data/sections/OurFood.md":"chunks/OurFood.31d69efc.mjs","/home/luke/repos/client-work/offcenter/src/data/sections/OurStory.md":"chunks/OurStory.769608cc.mjs","/home/luke/repos/client-work/offcenter/src/data/footer-links/Accessibility.md":"chunks/Accessibility.fae3e282.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/vegan-pepperoni.json":"chunks/vegan-pepperoni.54162cfe.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/veggie-calzone.json":"chunks/veggie-calzone.02ba47a6.mjs","/home/luke/repos/client-work/offcenter/src/data/gallery/veggie-pizza.json":"chunks/veggie-pizza.0b4fc6ef.mjs","/home/luke/repos/client-work/offcenter/src/assets/logo.png":"chunks/logo.53e726dc.mjs","/home/luke/repos/client-work/offcenter/src/assets/placeholder-image.png":"chunks/placeholder-image.37aa72c4.mjs","/home/luke/repos/client-work/offcenter/src/assets/Project 5.jpg":"chunks/Project 5.4dcad6b2.mjs","/home/luke/repos/client-work/offcenter/src/assets/Veggie Edit.jpg":"chunks/Veggie Edit.7b535308.mjs","/home/luke/repos/client-work/offcenter/src/assets/pepperoni.jpg":"chunks/pepperoni.785298fd.mjs","/home/luke/repos/client-work/offcenter/src/assets/pizza.jpg":"chunks/pizza.5c2fe7d3.mjs","/home/luke/repos/client-work/offcenter/src/assets/four-pizzas.jpeg":"chunks/four-pizzas.f77db63a.mjs","/home/luke/repos/client-work/offcenter/src/assets/joel-cooking.webp":"chunks/joel-cooking.765efe7c.mjs","/home/luke/repos/client-work/offcenter/src/assets/tara-liz-joel.webp":"chunks/tara-liz-joel.e19cdf90.mjs","/home/luke/repos/client-work/offcenter/node_modules/.pnpm/@astrojs+image@0.8.1_sharp@0.31.1/node_modules/@astrojs/image/dist/loaders/squoosh.js":"chunks/squoosh.46428245.mjs","@astrojs/svelte/client.js":"client.8b7d56e5.js","@astrojs/react/client-v17.js":"client-v17.3ce05981.js","/astro/hoisted.js?q=0":"hoisted.435d66b4.js","/astro/hoisted.js?q=1":"hoisted.1923a282.js","astro:scripts/before-hydration.js":""},"assets":["/assets/fredoka-hebrew-600-normal.02b6c5ad.woff2","/assets/fredoka-latin-600-normal.77a0113a.woff2","/assets/fredoka-hebrew-variable-wghtOnly-normal.e554c745.woff2","/assets/fredoka-latin-variable-wghtOnly-normal.f84e8d50.woff2","/assets/fredoka-one-latin-400-normal.e9986c62.woff2","/assets/montserrat-cyrillic-ext-500-normal.cb7edefd.woff2","/assets/montserrat-cyrillic-500-normal.ef388264.woff2","/assets/montserrat-latin-ext-500-normal.b9557b7d.woff2","/assets/montserrat-latin-500-normal.ed121b1a.woff2","/assets/montserrat-cyrillic-variable-wghtOnly-normal.a8447cde.woff2","/assets/montserrat-cyrillic-ext-variable-wghtOnly-normal.3fef5946.woff2","/assets/montserrat-latin-variable-wghtOnly-normal.ae919a7c.woff2","/assets/montserrat-latin-ext-variable-wghtOnly-normal.cffe1393.woff2","/assets/montserrat-vietnamese-variable-wghtOnly-normal.56544b89.woff2","/assets/montserrat-cyrillic-variable-wghtOnly-italic.8a7e993e.woff2","/assets/montserrat-cyrillic-ext-variable-wghtOnly-italic.15d402e4.woff2","/assets/montserrat-latin-variable-wghtOnly-italic.33befdbb.woff2","/assets/montserrat-latin-ext-variable-wghtOnly-italic.9df5f242.woff2","/assets/montserrat-vietnamese-variable-wghtOnly-italic.a48afdb0.woff2","/assets/patua-one-latin-400-normal.74609e16.woff2","/assets/rammetto-one-latin-ext-400-normal.7470abeb.woff2","/assets/rammetto-one-latin-400-normal.2edfb644.woff2","/assets/fredoka-all-600-normal.99f01391.woff","/assets/fredoka-one-all-400-normal.bc136881.woff","/assets/montserrat-all-500-normal.6c5dce7b.woff","/assets/patua-one-all-400-normal.de1dbd7e.woff","/assets/rammetto-one-all-400-normal.51c4584d.woff","/assets/placeholder-image.5a3297b8.png","/assets/logo.9487d5f5.png","/assets/tara-liz-joel.f2fc23e4.webp","/assets/joel-cooking.cfadc3c5.webp","/assets/four-pizzas.605883e8.jpeg","/assets/Project 5.16a0fa2c.jpg","/assets/Veggie Edit.219f43ea.jpg","/assets/pepperoni.5f72aa24.jpg","/assets/pizza.ceb274e2.jpg","/assets/index.50141040.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/browserconfig.xml","/client-v17.3ce05981.js","/client.8b7d56e5.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/favicon.png","/hoisted.435d66b4.js","/mstile-150x150.png","/placeholder-image.png","/safari-pinned-tab.svg","/site.webmanifest","/admin/previews.css","/assets/tagline-bg copy.webp","/assets/tagline-bg.webp","/assets/waves.svg","/chunks/index.9a938442.js","/uploads/Project 5.jpg","/uploads/Veggie Edit.jpg","/uploads/four-pizzas.jpeg","/uploads/joel-cooking.webp","/uploads/logo.png","/uploads/pepperoni.jpg","/uploads/pizza.jpg","/uploads/placeholder-image.png","/uploads/tara-liz-joel.webp"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
