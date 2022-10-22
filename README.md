@@ -1,44 +1,26 @@
-# Welcome to [Astro](https://astro.build)
+# Off Center, Patio & Pub
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+> One part Puerto Rico. One part New York. Two parts incredible. 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Off Center is a vegan/vegetarian-focused pizza restaurant in Hilliard Ohio. This is the repository for their website.
 
-## 🚀 Project Structure
+This site was built by [Luke Shafer](https://github.com/lukeshafer). It was built with [Astro](https://astro.build) as a static site generator, using [Svelte](https://svelte.dev) for client-side scripts, and it is powered by [Netlify](https://netlify.com) and [Netlify CMS](https://netlifycms.org).
 
-Inside of your Astro project, you'll see the following folders and files:
+If you find any issues with this site, please contact Luke Shafer at [hello@lukeshafer.com](mailto:hello@lukeshafer.com) or [lukeshafer.com](https://lukeshafer.com). Accessibility concerns can be sent to [a11y@lukeshafer.com](mailto:a11y@lukeshafer.com) as well.
 
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+## Building the site
+
+To build the site, clone this repository, install npm, and run
+
+```bash
+npm install
+npm run build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To run a development build locally, run
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+```bash
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+and visit [localhost](http://localhost):3000 in your browser. 
