@@ -1,9 +1,9 @@
 ---
-import Slideshow from '@components/landing/Slideshow.astro';
+/*import Slideshow from '@components/landing/Slideshow.astro';*/
 import Button from '@components/Button.astro';
-import type { Props as SlideshowProps } from "./Slideshow.astro"
+import type { Props as SlideshowProps } from './Slideshow.astro';
 
-type Gallery = SlideshowProps["gallery"]
+type Gallery = SlideshowProps['gallery'];
 
 export interface Props {
 	gallery: Gallery;
@@ -25,7 +25,7 @@ const formatPhone = (phone: string) => {
 
 <section>
 	<div class="gallery">
-		<Slideshow gallery={gallery} />
+		<!--<Slideshow gallery={gallery} />-->
 	</div>
 
 	<div class="order">
