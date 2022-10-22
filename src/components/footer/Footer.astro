@@ -19,6 +19,8 @@ export interface Props {
 const { hours, email, address, links, phone } = Astro.props as Props;
 
 const formatPhone = (phone: string) => {
+	phone = phone.replaceAll(/[^0-9]/g, '');
+
 	return `(${phone.substring(0, 3)}) ${phone.substring(
 		3,
 		6

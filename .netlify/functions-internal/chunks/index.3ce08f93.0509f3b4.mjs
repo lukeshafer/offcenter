@@ -1,0 +1,1 @@
+/* Pure CSS chunk chunks/index.3ce08f93.0509f3b4.mjs */ export const $ = {};export const a = {};export const b = {};

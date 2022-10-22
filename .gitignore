@@ -18,3 +18,5 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+.disablede-s-l-i-n-t.json

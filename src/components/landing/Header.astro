@@ -1,5 +1,5 @@
 ---
-import TodaysHours from './TodaysHours.svelte';
+import TodaysHours from './TodaysHours.astro';
 import Social from './Social.astro';
 import {
 	default as Address,
@@ -41,8 +41,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 	</div>
 
 	<div class="hours">
-		{/* @ts-ignore */}
-		<TodaysHours hours={hours} client:idle />
+		<TodaysHours hours={hours} />
 	</div>
 
 	<div class="address">

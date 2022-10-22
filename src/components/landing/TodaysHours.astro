@@ -1,0 +1,32 @@
+---
+import { getHourString } from '@lib/dateHelpers';
+type Hours = typeof import('@data/hours.json');
+export interface Props {
+	hours: Hours;
+}
+
+const { hours } = Astro.props as Props;
+
+const hoursToDisplay = getHourString(hours);
+const time = new Date().getMinutes();
+---
+
+<div hidden>
+	{time}
+</div>
+<p>{hoursToDisplay}</p>
+
+<style>
+	p {
+		background-color: var(--color-primary);
+		padding: 0.3em calc(var(--margin-page-h) + 0em);
+		margin: 0 calc(var(--margin-page-h) * -1);
+		text-transform: capitalize;
+		white-space: pre;
+
+		/* text formatting */
+		text-shadow: var(--text-shadow);
+		font-weight: 600;
+		font-size: var(--h-hours-font);
+	}
+</style>

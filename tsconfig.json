@@ -1,15 +1,31 @@
 {
+	"$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tsconfig.json",
 	"extends": "astro/tsconfigs/strictest",
 	"compilerOptions": {
 		"baseUrl": ".",
 		// Aliases
 		"paths": {
-			"@components/*": ["src/components/*"],
-			"@config/*": ["src/config/*"],
-			"@data/*": ["src/data/*"],
-			"@layouts/*": ["src/layouts/*"],
-			"@assets/*": ["src/assets/*"]
+			"@components/*": [
+				"src/components/*"
+			],
+			"@config/*": [
+				"src/config/*"
+			],
+			"@data/*": [
+				"src/data/*"
+			],
+			"@layouts/*": [
+				"src/layouts/*"
+			],
+			"@assets/*": [
+				"src/assets/*"
+			],
+			"@lib/*": [
+				"src/lib/*"
+			]
 		},
-		"types": ["@astrojs/image/client"]
+		"types": [
+			"@astrojs/image/client"
+		]
 	}
 }
