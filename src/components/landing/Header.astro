@@ -73,11 +73,14 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 		/* Box width and height */
 		box-sizing: border-box;
 		width: clamp(65vw, 200vh - 100vw, 100%);
-		height: clamp(60%, 100vw, 100vh);
+		height: clamp(68%, 100vw, 100vh);
+		height: clamp(68%, 100svw, 100svh);
 
 		/* Box shape */
 		--header-bottom-point: clamp(0px, 100vw - 100vh, 40vw);
-		--header-right-point: clamp(0vh, 100vh - 100vw, 30vh);
+		--header-bottom-point: clamp(0px, 100svw - 100svh, 40vw);
+		--header-right-point: clamp(0vh, 100vh - 100vw, 35vh);
+		--header-right-point: clamp(0vh, 100svh - 100vw, 35svh);
 		clip-path: polygon(
 			0% 0%,
 			100% 0%,
@@ -181,7 +184,7 @@ const { name, subName, logo, hours, socials, address } = Astro.props as Props;
 
 	@media screen and (min-width: 450px) and (max-width: 768px) {
 		.socials {
-			margin-right: clamp(0px, 20vw - 20vh, 9rem);
+			margin-right: clamp(0px, 30vw - 20vh, 9rem);
 		}
 	}
 

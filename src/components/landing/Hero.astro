@@ -31,7 +31,8 @@ const formatPhone = (phone: string) => {
 	<div class="order">
 		<Button link={orderLink}>Order Online</Button>
 		<address>
-			or call <a href={`tel:+1${phone}`}>{formatPhone(phone)}</a>
+			<a href={`tel:+1${phone}`}>{formatPhone(phone)}</a>
+			<a href="assets/off-center-menu.pdf">Menu</a>
 		</address>
 	</div>
 </div>
@@ -44,7 +45,7 @@ const formatPhone = (phone: string) => {
 		bottom: 0;
 
 		/* container size */
-		height: clamp(70%, 100vw, 100vh);
+		height: clamp(71%, 100vw, 100vh);
 		width: clamp(60vw, 100vw, 100vh);
 
 		/* inner layout */
@@ -68,6 +69,7 @@ const formatPhone = (phone: string) => {
 		font-family: var(--font-body);
 		color: var(--color-text-dk);
 		text-transform: uppercase;
+		font-style: normal;
 
 		font-weight: 600;
 		letter-spacing: 0.12em;
@@ -75,6 +77,12 @@ const formatPhone = (phone: string) => {
 
 		padding-top: calc(0.1 * var(--h-button-font));
 		align-self: start;
+
+		/*inner layout*/
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: space-between;
 	}
 
 	address > a {

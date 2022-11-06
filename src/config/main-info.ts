@@ -94,5 +94,14 @@ export const mainInfo: CmsCollectionFile = {
 			editor_components: [],
 			modes: ['rich_text'],
 		},
+		{
+			label: 'Menu PDF',
+			name: 'menuPDF',
+			widget: 'file',
+			default: '/assets/menu.pdf',
+			allow_multiple: false,
+			media_folder: '/public/uploads/',
+			public_folder: '/uploads',
+		},
 	],
 };
