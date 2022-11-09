@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { getImage } from '@astrojs/image';
 import { importImage } from 'src/lib/importImage';
 
 export interface Props {
@@ -11,6 +11,17 @@ export interface Props {
 }
 
 const { gallery } = Astro.props as Props;
+const galleryData = await Promise.all(
+	gallery.map(async ({ thumbnail, alt }) => {
+		const data = await getImage({
+			src: importImage(thumbnail),
+			width: 1100,
+			aspectRatio: '1:1',
+			format: 'webp',
+		});
+		return { ...data, alt };
+	})
+);
 ---
 
 <script>
@@ -44,7 +55,15 @@ const { gallery } = Astro.props as Props;
 	);
 
 	window.addEventListener('load', () => {
-		const images = document.querySelectorAll('.gallery > img');
+		const images = document.querySelectorAll(
+			'.gallery > img'
+		) as NodeListOf<HTMLImageElement>;
+
+		images.forEach((img) => {
+			const src = img.getAttribute('data-src');
+			if (src) img.setAttribute('src', src);
+		});
+
 		if (checkMotion.matches) {
 			setTimeout(() => updateImage(images, 0, 1), 5000);
 			images.forEach((img) => img.classList.remove('hidden'));
@@ -54,14 +73,14 @@ const { gallery } = Astro.props as Props;
 
 <div class="gallery">
 	{
-		gallery.map(({ thumbnail, alt }, index) => (
-			<Image
-				src={importImage(thumbnail)}
+		galleryData.map(({ width, height, src, alt }, index) => (
+			<img
+				src={index === 0 ? src : undefined}
+				data-src={index !== 0 ? src : undefined}
+				width={width}
+				height={height}
 				alt={alt}
-				width={1100}
-				aspectRatio="1:1"
 				class={index === 0 ? 'visible' : ''}
-				format="webp"
 				hidden={index !== 0}
 			/>
 		))
