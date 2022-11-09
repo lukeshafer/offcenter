@@ -22,13 +22,6 @@ const galleryData = await Promise.all(
 		return { ...data, alt };
 	})
 );
-
-const smallImg = await getImage({
-	src: importImage(gallery[0]!.thumbnail),
-	width: 300,
-	aspectRatio: '1:1',
-	format: 'webp',
-});
 ---
 
 <script>
@@ -82,14 +75,13 @@ const smallImg = await getImage({
 	{
 		galleryData.map(({ width, height, src, alt }, index) => (
 			<img
-				src={index === 0 ? smallImg.src : undefined}
-				data-src={src}
+				src={index === 0 ? src : undefined}
+				data-src={index !== 0 ? src : undefined}
 				width={width}
 				height={height}
 				alt={alt}
 				class={index === 0 ? 'visible' : ''}
 				hidden={index !== 0}
-				loading={index === 0 ? 'eager' : undefined}
 			/>
 		))
 	}
