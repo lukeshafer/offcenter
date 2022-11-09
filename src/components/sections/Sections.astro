@@ -1,6 +1,7 @@
 ---
 import type { MarkdownInstance } from 'astro';
-import { Image } from '@astrojs/image/components';
+import { getImage } from '@astrojs/image';
+
 import { importImage } from '../../lib/importImage';
 
 interface SectionFrontmatter {
@@ -17,21 +18,44 @@ export interface Props {
 const { sections } = Astro.props as Props;
 
 sections.sort((a, b) => a.frontmatter.sort - b.frontmatter.sort);
+const imageData = await Promise.all(
+	sections.map(async ({ frontmatter: { thumbnail } }) => {
+		return await getImage({
+			src: importImage(thumbnail),
+			width: 800,
+			fit: 'cover',
+			aspectRatio: '1:1',
+			format: 'webp',
+		});
+	})
+);
 ---
 
-<div>
+<script>
+	window.addEventListener('load', () => {
+		const images = document.querySelectorAll(
+			'#section-collection > article > img'
+		) as NodeListOf<HTMLImageElement>;
+
+		images.forEach((img) => {
+			const src = img.getAttribute('data-src');
+			if (src) img.setAttribute('src', src);
+		});
+	});
+</script>
+
+<div id="section-collection">
 	{
-		sections.map(({ Content, frontmatter }) => (
+		sections.map(({ Content, frontmatter }, index) => (
 			<article>
 				<h2 slot="title">{frontmatter.title}</h2>
-				<Image
+				<img
 					slot="image"
-					src={importImage(frontmatter.thumbnail)}
+					data-src={imageData[index]!.src}
 					alt={frontmatter.alt}
+					width={imageData[index]!.width}
+					height={imageData[index]!.height}
 					loading="lazy"
-					width={700}
-					fit="cover"
-					format="webp"
 				/>
 				<Content />
 			</article>
