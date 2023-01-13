@@ -30,12 +30,14 @@ export const articles: CmsCollection = {
 			widget: 'image',
 			hint: 'Note: Images do not work in the preview, but they will appear on the actual site.',
 			allow_multiple: false,
+			required: false,
 		},
 		{
 			label: 'Image Description',
 			name: 'alt',
 			widget: 'string',
 			hint: 'Please provide a brief description of the image. This allows users who cannot see the image to have its context. For example: *Our family at the beach*, *An Off Center employee preparing a pizza*. For more information, [click here](https://supercooldesign.co.uk/blog/how-to-write-good-alt-text).',
+			required: false,
 		},
 		{
 			label: 'Body',

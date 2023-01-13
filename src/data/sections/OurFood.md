@@ -1,6 +1,6 @@
 ---
 title: Our Food
-sort: 1
+sort: 2
 thumbnail: four-pizzas.jpeg
 alt: Four large pizzas with a variety of toppings
 ---

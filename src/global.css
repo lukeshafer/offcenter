@@ -27,7 +27,7 @@
 	--color-bg: hsl(40, 18%, 97%);
 	--color-link: #d7e0f9;
 
-	--margin-page-h: clamp(1rem, -1rem + 10vw, 10rem);
+	--margin-page-h: clamp(1rem, -1rem + 10vw, 6rem);
 	--margin-page-v: clamp(1rem, -0.5rem + 5vw, 8rem);
 
 	--font-title: 'Rammetto One', sans-serif;
