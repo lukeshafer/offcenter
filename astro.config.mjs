@@ -7,14 +7,13 @@ import image from '@astrojs/image';
 import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    svelte(),
-    react(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
-  ],
+  integrations: [svelte(), react(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), partytown()],
   output: 'server',
-  adapter: netlify(),
+  adapter: netlify()
 });

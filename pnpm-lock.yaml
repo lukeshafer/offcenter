@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/image': ^0.8.1
   '@astrojs/netlify': ^1.2.0
+  '@astrojs/partytown': ^1.1.1
   '@astrojs/react': ^1.2.1
   '@astrojs/svelte': ^1.0.2
   '@fontsource/fredoka': ^4.5.8
@@ -44,6 +45,7 @@ specifiers:
 dependencies:
   '@astrojs/image': 0.8.1_sharp@0.31.1
   '@astrojs/netlify': 1.2.0
+  '@astrojs/partytown': 1.1.1
   '@astrojs/svelte': 1.0.2_omcg7sqlqaksavdi3nytrg6xhm
   '@fontsource/fredoka': 4.5.8
   '@fontsource/fredoka-one': 4.5.9
@@ -189,6 +191,13 @@ packages:
     dependencies:
       '@astrojs/webapi': 1.1.0
       esbuild: 0.14.54
+    dev: false
+
+  /@astrojs/partytown/1.1.1:
+    resolution: {integrity: sha512-IaKzYieiuxnSRGSuAivV92kDTa0ENbei4Y0yEAowhyzV6MxJJImYEUKycSo/HUJwPQQmsPmBbp/IA4pyoL1Wxg==}
+    dependencies:
+      '@builder.io/partytown': 0.7.5
+      mrmime: 1.0.1
     dev: false
 
   /@astrojs/prism/1.0.1:
@@ -496,6 +505,11 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+
+  /@builder.io/partytown/0.7.5:
+    resolution: {integrity: sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==}
+    hasBin: true
+    dev: false
 
   /@csstools/postcss-cascade-layers/1.1.1_postcss@8.4.18:
     resolution: {integrity: sha512-+KdYrpKC5TgomQr2DlZF4lDEpHcoxnj5IGddYYfBWJAKfj1JtuHUIqMa+E1pJJ+z3kvDViWMqyqPlG4Ja7amQA==}
@@ -5086,7 +5100,6 @@ packages:
   /mrmime/1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
     engines: {node: '>=10'}
-    dev: true
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
